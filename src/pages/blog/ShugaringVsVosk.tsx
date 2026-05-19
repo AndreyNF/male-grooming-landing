@@ -41,12 +41,12 @@ const ShugaringVsVosk = () => {
       canonical="https://sugarts.ru/blog/shugaring-vs-vosk/"
     >
       {/* 1. Hero */}
-      <section className="bg-black text-white py-16">
+      <section className="bg-black text-white py-10 sm:py-16">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h1 className="text-4xl lg:text-5xl font-heading font-bold leading-tight text-gold mb-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-heading font-bold leading-tight text-gold mb-4">
             Мужской шугаринг и восковая депиляция: что выбрать
           </h1>
-          <p className="text-white/60 text-lg mb-8">
+          <p className="text-white/60 text-sm sm:text-base mb-8">
             Разбираем разницу — и почему я работаю воском
           </p>
           <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
@@ -64,42 +64,44 @@ const ShugaringVsVosk = () => {
       {/* 2. Сравнительная таблица */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-heading font-bold text-black mb-10 text-center">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-10 text-center">
             Шугаринг vs воск: сравнение
           </h2>
 
-          {/* Header row */}
-          <div className="grid grid-cols-3 gap-px bg-gold/30 rounded-t-lg overflow-hidden mb-px">
-            <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide">
-              Критерий
-            </div>
-            <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide text-center">
-              Воск
-            </div>
-            <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide text-center">
-              Шугаринг
-            </div>
-          </div>
-
-          {/* Data rows */}
-          <div className="rounded-b-lg overflow-hidden border border-gray-200 divide-y divide-gray-200">
-            {COMPARE_ROWS.map((row, idx) => (
-              <div
-                key={row.criteria}
-                className={`grid grid-cols-3 gap-px ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
-              >
-                <div className="px-4 py-3 text-black font-medium text-sm">
-                  {row.criteria}
-                </div>
-                <div className="px-4 py-3 text-steel text-sm text-center flex items-center justify-center gap-1.5">
-                  <Icon name="Check" size={14} className="text-gold shrink-0" />
-                  {row.wax}
-                </div>
-                <div className="px-4 py-3 text-steel text-sm text-center">
-                  {row.sugar}
-                </div>
+          <div className="overflow-x-auto">
+            {/* Header row */}
+            <div className="grid grid-cols-3 gap-px bg-gold/30 rounded-t-lg overflow-hidden mb-px min-w-[400px]">
+              <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide">
+                Критерий
               </div>
-            ))}
+              <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide text-center">
+                Воск
+              </div>
+              <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide text-center">
+                Шугаринг
+              </div>
+            </div>
+
+            {/* Data rows */}
+            <div className="rounded-b-lg overflow-hidden border border-gray-200 divide-y divide-gray-200 min-w-[400px]">
+              {COMPARE_ROWS.map((row, idx) => (
+                <div
+                  key={row.criteria}
+                  className={`grid grid-cols-3 gap-px ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+                >
+                  <div className="px-4 py-3 text-black font-medium text-sm">
+                    {row.criteria}
+                  </div>
+                  <div className="px-4 py-3 text-steel text-sm text-center flex items-center justify-center gap-1.5">
+                    <Icon name="Check" size={14} className="text-gold shrink-0" />
+                    {row.wax}
+                  </div>
+                  <div className="px-4 py-3 text-steel text-sm text-center">
+                    {row.sugar}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -107,7 +109,7 @@ const ShugaringVsVosk = () => {
       {/* 3. Почему воск */}
       <section className="bg-gray-50 py-12">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-heading font-bold text-black mb-6 text-center">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-6 text-center">
             Почему я делаю воск, а не шугаринг
           </h2>
           <p className="text-steel text-base leading-relaxed">
@@ -126,7 +128,7 @@ const ShugaringVsVosk = () => {
       {/* 4. CTA */}
       <section className="bg-black py-12">
         <div className="container mx-auto px-4 max-w-2xl text-center">
-          <h2 className="text-3xl font-heading font-bold text-gold mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-gold mb-4">
             Записаться на восковую депиляцию воском
           </h2>
           <p className="text-white/70 text-base mb-8">

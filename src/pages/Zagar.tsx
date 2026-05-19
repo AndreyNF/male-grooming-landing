@@ -20,19 +20,19 @@ const Zagar = () => {
       canonical="https://sugarts.ru/zagar/"
     >
       {/* 1. Hero */}
-      <section className="bg-black text-white py-20">
+      <section className="bg-black text-white py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h1 className="text-4xl lg:text-5xl font-heading font-bold leading-tight text-gold mb-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-heading font-bold leading-tight text-gold mb-4">
             Моментальный автозагар в Екатеринбурге
           </h1>
-          <p className="text-white/60 text-lg mb-8 tracking-wide">
+          <p className="text-white/60 text-sm sm:text-base mb-8 tracking-wide">
             Для мужчин&nbsp;|&nbsp;ул. Культуры 2&nbsp;|&nbsp;10:00–20:00
           </p>
           <a
             href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mb-10"
+            className="w-full sm:w-auto flex justify-center sm:inline-block mb-10"
           >
             <Button
               size="lg"
@@ -53,7 +53,7 @@ const Zagar = () => {
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-black mb-4">
+            <h2 className="text-2xl lg:text-4xl font-heading font-bold text-black mb-4">
               Как проходит процедура автозагара
             </h2>
           </div>
@@ -107,13 +107,13 @@ const Zagar = () => {
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-black mb-4">
+            <h2 className="text-2xl lg:text-4xl font-heading font-bold text-black mb-4">
               Цены на автозагар екатеринбург
             </h2>
           </div>
           <div className="max-w-xl mx-auto">
             <Card className="bg-white shadow-xl border-l-4 border-l-gold">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-5 sm:p-8 text-center">
                 <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
                   <Icon name="BadgePercent" size={28} className="text-gold" />
                 </div>
@@ -143,7 +143,7 @@ const Zagar = () => {
       {/* 4. Уход после загара */}
       <section className="bg-white py-12">
         <div className="container mx-auto px-4 max-w-2xl">
-          <h2 className="text-3xl font-heading font-bold text-black mb-8 text-center">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-8 text-center">
             Уход после моментального загара
           </h2>
           <ul className="space-y-4">
@@ -178,7 +178,7 @@ const Zagar = () => {
       {/* 5. FAQ */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4 max-w-2xl">
-          <h2 className="text-3xl font-heading font-bold text-black mb-10 text-center">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-10 text-center">
             Частые вопросы об автозагаре
           </h2>
           <Accordion type="single" collapsible className="w-full">
@@ -236,7 +236,7 @@ const Zagar = () => {
       {/* 6. CTA */}
       <section className="bg-black py-12">
         <div className="container mx-auto px-4 max-w-2xl text-center">
-          <h2 className="text-3xl font-heading font-bold text-gold mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-gold mb-4">
             Записаться на автозагар в Екатеринбурге
           </h2>
           <p className="text-white/70 text-base mb-8 leading-relaxed">
@@ -246,7 +246,7 @@ const Zagar = () => {
             href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mb-6"
+            className="w-full sm:w-auto flex justify-center sm:inline-block mb-6"
           >
             <Button
               size="lg"

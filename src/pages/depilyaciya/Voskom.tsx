@@ -27,12 +27,12 @@ const Voskom = () => {
       canonical="https://sugarts.ru/depilyaciya/voskom/"
     >
       {/* Hero */}
-      <section className="bg-black text-white py-20">
+      <section className="bg-black text-white py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h1 className="text-4xl lg:text-5xl font-heading font-bold leading-tight text-gold mb-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-heading font-bold leading-tight text-gold mb-4">
             Мужская восковая депиляция воском
           </h1>
-          <p className="text-white/60 text-lg mb-8 tracking-wide">
+          <p className="text-white/60 text-sm sm:text-base mb-8 tracking-wide">
             Екатеринбург, ул. Культуры 2&nbsp;|&nbsp;Только мужчины&nbsp;|&nbsp;с 2021 года
           </p>
           <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
@@ -50,7 +50,7 @@ const Voskom = () => {
       {/* Текст — воск vs шугаринг */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-heading font-bold text-black mb-6 text-center">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-6 text-center">
             Восковая депиляция — не шугаринг и не лазер
           </h2>
           <p className="text-steel text-base leading-relaxed">
@@ -69,13 +69,13 @@ const Voskom = () => {
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-black mb-4">
+            <h2 className="text-2xl lg:text-4xl font-heading font-bold text-black mb-4">
               Прайс восковой депиляции
             </h2>
           </div>
           <div className="max-w-xl mx-auto">
             <Card className="bg-white shadow-xl border-l-4 border-l-gold">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-8">
                 <div className="space-y-3 text-steel">
                   {PRICE_ROWS.map((row) => (
                     <div
@@ -96,7 +96,7 @@ const Voskom = () => {
       {/* CTA */}
       <section className="bg-black py-12">
         <div className="container mx-auto px-4 max-w-2xl text-center">
-          <h2 className="text-3xl font-heading font-bold text-gold mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-gold mb-4">
             Записаться на восковую депиляцию
           </h2>
           <p className="text-white/70 text-base mb-8">

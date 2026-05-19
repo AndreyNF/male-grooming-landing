@@ -14,12 +14,12 @@ const Boroda = () => {
       canonical="https://sugarts.ru/depilyaciya/boroda/"
     >
       {/* Hero */}
-      <section className="bg-black text-white py-20">
+      <section className="bg-black text-white py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h1 className="text-4xl lg:text-5xl font-heading font-bold leading-tight text-gold mb-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-heading font-bold leading-tight text-gold mb-4">
             Окантовка бороды воском для мужчин
           </h1>
-          <p className="text-white/60 text-lg mb-8 tracking-wide">
+          <p className="text-white/60 text-sm sm:text-base mb-8 tracking-wide">
             1000 ₽&nbsp;|&nbsp;Екатеринбург, ул. Культуры 2
           </p>
           <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@ const Boroda = () => {
       {/* Описание процедуры */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-heading font-bold text-black mb-8 text-center">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-8 text-center">
             Как проходит окантовка бороды воском
           </h2>
           <div className="space-y-5 text-steel text-base leading-relaxed">
@@ -68,14 +68,14 @@ const Boroda = () => {
 
           <div className="mt-10">
             <Card className="bg-gold/5 border border-gold/30">
-              <CardContent className="p-6 flex items-center justify-between gap-4">
+              <CardContent className="p-6 flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <p className="font-heading font-semibold text-black text-lg">
                     Окантовка бороды воском
                   </p>
                   <p className="text-steel text-sm mt-1">Екатеринбург, ул. Культуры 2, каб. 115.3</p>
                 </div>
-                <span className="text-3xl font-heading font-bold text-gold shrink-0">
+                <span className="text-2xl sm:text-3xl font-heading font-bold text-gold shrink-0">
                   1000 ₽
                 </span>
               </CardContent>
@@ -87,7 +87,7 @@ const Boroda = () => {
       {/* CTA */}
       <section className="bg-black py-12">
         <div className="container mx-auto px-4 max-w-2xl text-center">
-          <h2 className="text-3xl font-heading font-bold text-gold mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-gold mb-4">
             Записаться на окантовку бороды
           </h2>
           <p className="text-white/70 text-base mb-8">
