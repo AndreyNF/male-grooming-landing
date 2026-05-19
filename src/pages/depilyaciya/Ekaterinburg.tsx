@@ -20,7 +20,7 @@ const Ekaterinburg = () => {
             Мужская депиляция в Екатеринбурге
           </h1>
           <p className="text-white/60 text-sm sm:text-base mb-8 tracking-wide">
-            ул. Культуры 2, каб. 115.3&nbsp;|&nbsp;Только мужчины&nbsp;|&nbsp;с 2021 года
+            Личный кабинет мастера — не салон, не очередь. Работаю только с мужчинами. Запись через Telegram.
           </p>
           <a
             href={TELEGRAM_URL}
@@ -43,7 +43,7 @@ const Ekaterinburg = () => {
       <section className="bg-white py-12">
         <div className="container mx-auto px-4 max-w-2xl">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-8 text-center">
-            Где находится
+            Где меня найти
           </h2>
           <Card className="bg-white shadow-xl border-l-4 border-l-gold mb-6">
             <CardContent className="p-5 sm:p-8 space-y-5">
@@ -54,7 +54,7 @@ const Ekaterinburg = () => {
                 <div>
                   <p className="font-heading font-semibold text-black text-base">Адрес</p>
                   <p className="text-steel text-sm mt-1 leading-relaxed">
-                    Екатеринбург, ул. Культуры 2, кабинет 115.3, 2 этаж
+                    г. Екатеринбург, ул. Культуры, 2, кабинет 115.3
                   </p>
                 </div>
               </div>
@@ -79,8 +79,7 @@ const Ekaterinburg = () => {
             </CardContent>
           </Card>
           <p className="text-steel text-sm sm:text-base leading-relaxed text-center">
-            Нахожусь в салоне красоты на ул. Культуры 2. Заходите на 2 этаж, кабинет 115.3.
-            Рядом есть бесплатная парковка.
+            Вход в здание — со стороны главного входа. Кабинет 115.3 — на первом этаже. Если не нашли — напишите, встречу.
           </p>
         </div>
       </section>
@@ -102,7 +101,7 @@ const Ekaterinburg = () => {
                     <p className="font-heading font-semibold text-black text-base leading-snug group-hover:text-gold transition-colors">
                       Восковая депиляция
                     </p>
-                    <p className="text-steel text-sm mt-1">Все зоны от 700 ₽</p>
+                    <p className="text-steel text-sm mt-1">Все зоны: борода, подмышки, грудь, спина, бикини, ноги, руки. Результат — 3–5 недель гладкости.</p>
                   </div>
                   <Icon name="ChevronRight" size={18} className="text-gold shrink-0" />
                 </CardContent>
@@ -116,9 +115,9 @@ const Ekaterinburg = () => {
                   </div>
                   <div className="flex-1">
                     <p className="font-heading font-semibold text-black text-base leading-snug group-hover:text-gold transition-colors">
-                      Моментальный загар
+                      Моментальный автозагар
                     </p>
-                    <p className="text-steel text-sm mt-1">Индивидуальная цена</p>
+                    <p className="text-steel text-sm mt-1">Натуральный загар без солнца за один визит. Подбираю оттенок индивидуально.</p>
                   </div>
                   <Icon name="ChevronRight" size={18} className="text-gold shrink-0" />
                 </CardContent>

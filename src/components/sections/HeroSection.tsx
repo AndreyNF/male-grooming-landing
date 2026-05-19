@@ -12,18 +12,17 @@ const HeroSection = () => {
               Мужская депиляция воском и автозагар в Екатеринбурге
             </h1>
             <p className="text-lg text-foreground/70">
-              Екатеринбург, ул. Культуры 2, каб. 115.3 — только мужчины, с 2021 года
+              Работаю только с мужчинами. Без очередей, без суеты — личный кабинет, стерильно, комфортно.
             </p>
+            <p className="text-sm text-foreground/50"><Icon name="MapPin" size={14} className="inline mr-1" />ул. Культуры, 2, каб. 115.3 · Ежедневно 10:00–20:00</p>
             <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-steel/30">
               <p className="text-xl text-foreground font-medium leading-relaxed">
-                Работаю исключительно с мужчинами. 
-                Гарантирую безболезненные процедуры и идеальный результат. 
-                Создаю атмосферу комфорта для каждого клиента.
+                Записаться можно через Telegram — отвечаю ежедневно с 10:00 до 20:00. Без предоплаты.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
               <a href="https://t.me/sugar_TS" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90 font-semibold px-8 py-3 text-lg animate-scale-in shadow-lg">Записаться </Button>
+                <Button size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90 font-semibold px-8 py-3 text-lg animate-scale-in shadow-lg">Записаться в Telegram</Button>
               </a>
               <Button variant="outline" size="lg" className="border-gold text-gold hover:bg-gold hover:text-black font-semibold px-8 py-3 text-lg">
                 <Icon name="MapPin" size={20} className="mr-2" />
@@ -63,18 +62,16 @@ const HeroSection = () => {
               Мужская депиляция воском и автозагар в Екатеринбурге
             </p>
             <p className="text-base text-foreground/70">
-              ул. Культуры 2, каб. 115.3 — только мужчины, с 2021 года
+              Только мужчины · ул. Культуры, 2 · 10:00–20:00
             </p>
             <div className="bg-black/60 backdrop-blur-sm rounded-lg p-6 border border-gold/30">
               <p className="text-lg text-foreground font-medium leading-relaxed">
-                Работаю исключительно с мужчинами. 
-                Гарантирую безболезненные процедуры и идеальный результат. 
-                Создаю атмосферу комфорта для каждого клиента.
+                Работаю только с мужчинами. Без очередей, без суеты — личный кабинет, стерильно, комфортно.
               </p>
             </div>
             <div className="flex flex-col gap-4 items-center">
               <a href="https://t.me/sugar_TS" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
-                <Button size="lg" className="w-full bg-gold text-black hover:bg-gold/90 font-semibold px-8 py-3 text-lg animate-scale-in shadow-lg">Записаться </Button>
+                <Button size="lg" className="w-full bg-gold text-black hover:bg-gold/90 font-semibold px-8 py-3 text-lg animate-scale-in shadow-lg">Записаться в Telegram</Button>
               </a>
               <Button variant="outline" size="lg" className="border-gold text-gold hover:bg-gold hover:text-black font-semibold px-8 py-3 text-lg">
                 <Icon name="MapPin" size={20} className="mr-2" />

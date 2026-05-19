@@ -9,11 +9,8 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
-            Связаться со мной
+            Как меня найти
           </h2>
-          <p className="text-lg text-gray-300">
-            Записывайтесь и задавайте вопросы
-          </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
@@ -24,11 +21,11 @@ const ContactSection = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <div className="">
+                  <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-4">
+                    <Icon name="Send" size={20} className="text-black" />
                   </div>
                   <div>
-                    <p className="font-semibold text-white"></p>
-                    <p className="text-gray-300"></p>
+                    <p className="font-semibold text-white">Telegram @sugar_TS</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -37,7 +34,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-white">Работаю</p>
-                    <p className="text-gray-300">Каждый день: 10:00 - 20:00</p>
+                    <p className="text-gray-300">Ежедневно, 10:00–20:00</p>
                   </div>
                 </div>
               </div>
@@ -55,8 +52,8 @@ const ContactSection = () => {
                     <Icon name="MapPin" size={20} className="text-black" />
                   </div>
                   <div>
-                    <p className="font-semibold text-white">Салон красоты</p>
-                    <p className="text-gray-300">Екатеринбург, ул. Культуры 2, кабинет 115.3, 2 этаж</p>
+                    <p className="font-semibold text-white">Адрес</p>
+                    <p className="text-gray-300">г. Екатеринбург, ул. Культуры, 2, кабинет 115.3</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -65,7 +62,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-white">Парковка</p>
-                    <p className="text-gray-300">Бесплатная, рядом с салоном</p>
+                    <p className="text-gray-300">Есть открытая парковка рядом со зданием</p>
                   </div>
                 </div>
               </div>
@@ -75,94 +72,94 @@ const ContactSection = () => {
 
         {/* FAQ Section - dark */}
         <div className="max-w-2xl mx-auto mb-12 animate-fade-in">
-          <h2 className="text-3xl font-heading font-bold text-white text-center mb-8">Частые вопросы</h2>
+          <h2 className="text-3xl font-heading font-bold text-white text-center mb-8">Ещё вопросы — отвечаю честно</h2>
           <Accordion type="multiple" className="space-y-3">
             <AccordionItem value="item-1" className="bg-card/10 border border-gold/20 rounded-lg px-6">
               <AccordionTrigger className="text-white font-medium hover:text-gold">
-                Болезненна ли восковая депиляция для мужчин?
+                Почему именно воск, а не шугаринг?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                Дискомфорт зависит от зоны и чувствительности кожи. Использую качественный воск и отработанную технику, чтобы процедура проходила максимально комфортно. Большинство клиентов переносят депиляцию спокойно, без сильной боли.
+                Воск лучше работает на жёстких и густых мужских волосах, особенно в сложных зонах — спина, грудь, бикини. Шугаринг чаще даёт вросшие волосы на грубом покрове.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2" className="bg-card/10 border border-gold/20 rounded-lg px-6">
               <AccordionTrigger className="text-white font-medium hover:text-gold">
-                Сколько времени занимает восковая депиляция?
+                Можно ли делать депиляцию в интимной зоне?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                От 15 до 60 минут в зависимости от зоны: окантовка бороды или уши — быстрее, ноги полностью или спина — дольше. Точное время скажу при записи.
+                Да, это обычная рабочая зона. Подхожу профессионально, без лишних комментариев. Конфиденциальность гарантирована.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3" className="bg-card/10 border border-gold/20 rounded-lg px-6">
               <AccordionTrigger className="text-white font-medium hover:text-gold">
-                Как проходит моментальный автозагар?
+                Я первый раз — что меня ждёт?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                Подбираю оттенок под ваш тон кожи, равномерно наношу профессиональный автозагар. Первый результат виден через 2–3 часа, окончательный оттенок формируется в течение суток.
+                Сначала кратко обсудим зоны и ожидания. Объясню, как пройдёт процедура. Никакого осуждения, никакой спешки — только работа.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="bg-card/10 border border-gold/20 rounded-lg px-6">
               <AccordionTrigger className="text-white font-medium hover:text-gold">
-                Как долго держится автозагар?
+                Как долго длится процедура?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                Обычно 7–10 дней при правильном уходе: не трите кожу мочалкой, увлажняйте, избегайте длительных горячих ванн в первые сутки.
+                Зависит от зон. Борода — 20–30 минут, бикини — 40–60 минут, несколько зон сразу — от 1 до 1,5 часов.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5" className="bg-card/10 border border-gold/20 rounded-lg px-6">
               <AccordionTrigger className="text-white font-medium hover:text-gold">
-                Как соблюдается гигиена во время процедур?
+                Могу ли я прийти с другом / партнёром?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                Работаю со стерильными одноразовыми расходниками, дезинфицирую кожу и инструменты, использую профессиональные материалы. Для каждого клиента — чистые принадлежности и подготовленное рабочее место.
+                Принимаю по одному — кабинет рассчитан на одного клиента. Записать друга можно сразу следующим слотом.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-6" className="bg-card/10 border border-gold/20 rounded-lg px-6">
               <AccordionTrigger className="text-white font-medium hover:text-gold">
-                Как подготовиться к депиляции воском?
+                Бывают ли акции или скидки?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                Волосы в зоне процедуры — около 5–7 мм (примерно две недели роста). За сутки не загорайте и не наносите крем на зону депиляции. При раздражении или воспалении на коже лучше перенести визит.
+                Информацию об акциях публикую в Telegram-канале. Подпишитесь, чтобы не пропустить.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-7" className="bg-card/10 border border-gold/20 rounded-lg px-6">
               <AccordionTrigger className="text-white font-medium hover:text-gold">
-                Как долго держится результат депиляции воском?
+                Что делать после процедуры?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                В среднем 3–6 недель. Волосы отрастают мягче и реже, чем после бритья. Срок зависит от особенностей кожи и зоны.
+                В течение 24 часов — не посещать сауну, бассейн, солярий, не тереть кожу мочалкой. На 3–5 день начните использовать скраб — это предотвращает вросшие волосы.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-8" className="bg-card/10 border border-gold/20 rounded-lg px-6">
               <AccordionTrigger className="text-white font-medium hover:text-gold">
-                Комфортно ли мужчинам у женщины-мастера?
+                Можно ли совместить депиляцию и автозагар в один визит?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                Да. Работаю только с мужчинами, всё проходит профессионально и уважительно, без лишних вопросов.
+                Нет. Автозагар наносится только на чистую кожу без свежего раздражения. Лучше сделать депиляцию и вернуться через 48 часов — результат будет идеальным.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-9" className="bg-card/10 border border-gold/20 rounded-lg px-6">
               <AccordionTrigger className="text-white font-medium hover:text-gold">
-                Вы оказываете интимные услуги?
+                У меня очень густые / жёсткие волосы. Поможет ли воск?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                Нет. Я мастер депиляции и автозагара: восковая депиляция (включая бикини) и моментальный загар — только косметологические процедуры.
+                Да, именно для таких волос воск и создан. Горячий воск особенно эффективен на плотном покрове.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-10" className="bg-card/10 border border-gold/20 rounded-lg px-6">
               <AccordionTrigger className="text-white font-medium hover:text-gold">
-                Больно ли делать депиляцию воском?
+                Есть ли парковка рядом?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                Ощущения индивидуальны, но при правильной технике процедура переносится легче, чем многие ожидают. При необходимости делаю паузы.
+                Да, рядом с ул. Культуры, 2 есть открытая парковка.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-11" className="bg-card/10 border border-gold/20 rounded-lg px-6">
               <AccordionTrigger className="text-white font-medium hover:text-gold">
-                Как записаться на процедуру?
+                Как вы соблюдаете стерильность?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                Напишите в Telegram @sugar_TS: укажите услугу и удобное время. Подтвержу запись и отвечу на вопросы до визита.
+                Одноразовые расходники, перчатки на каждого клиента, обработка поверхностей между визитами. Рабочее место готовится заново к каждой записи.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -171,14 +168,13 @@ const ContactSection = () => {
         <div className="text-center animate-fade-in">
           <div className="bg-gold/10 border border-gold/30 rounded-lg p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-heading font-semibold mb-4 text-gold">
-              Готовы попробовать?
+              Остались вопросы?
             </h3>
             <p className="text-gray-300 mb-6">
-              Запишитесь на первую процедуру. Гарантирую — вы останетесь довольны результатом. 
-              Если что-то не понравится — верну деньги.
+              Проще спросить напрямую — отвечаю честно и без лишних слов.
             </p>
             <a href="https://t.me/sugar_TS" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-gold text-black hover:bg-gold/90 font-semibold px-8 py-3 text-lg animate-scale-in shadow-lg">Написать </Button>
+              <Button size="lg" className="bg-gold text-black hover:bg-gold/90 font-semibold px-8 py-3 text-lg animate-scale-in shadow-lg">Написать в Telegram @sugar_TS</Button>
             </a>
           </div>
         </div>

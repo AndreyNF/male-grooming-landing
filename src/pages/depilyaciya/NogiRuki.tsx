@@ -7,12 +7,12 @@ import Icon from '@/components/ui/icon';
 const TELEGRAM_URL = 'https://t.me/sugar_TS';
 
 const PRICE_ROWS = [
-  { label: 'Ноги полностью', price: '4000 ₽' },
-  { label: 'Голени', price: '2000 ₽' },
-  { label: 'Руки полностью', price: '2500 ₽' },
-  { label: 'Руки до локтя', price: '2000 ₽' },
-  { label: 'Спина / Торс', price: '3000 ₽' },
-  { label: 'Подмышки', price: '1000 ₽' },
+  { label: 'Голень', price: '1 000 ₽' },
+  { label: 'Ноги полностью', price: '2 000 ₽' },
+  { label: 'Руки (предплечья)', price: '800 ₽' },
+  { label: 'Руки полностью', price: '1 200 ₽' },
+  { label: 'Спина', price: '1 500 ₽' },
+  { label: 'Грудь', price: '1 200 ₽' },
 ];
 
 const NogiRuki = () => {
@@ -29,7 +29,7 @@ const NogiRuki = () => {
             Депиляция ног, рук и спины для мужчин
           </h1>
           <p className="text-white/60 text-sm sm:text-base mb-8 tracking-wide">
-            Екатеринбург, ул. Культуры 2&nbsp;|&nbsp;Воском&nbsp;|&nbsp;Только мужчины
+            Крупные зоны — быстро, аккуратно, с результатом на 3–5 недель.
           </p>
           <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
             <Button

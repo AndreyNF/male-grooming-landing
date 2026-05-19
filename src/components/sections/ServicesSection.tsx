@@ -12,9 +12,6 @@ const ServicesSection = () => {
             <h2 className="text-3xl lg:text-4xl font-heading font-bold text-black mb-4">
               Депиляция для мужчин — воском, не шугаринг
             </h2>
-            <p className="text-lg text-steel max-w-2xl mx-auto">
-              Две основные процедуры, которыми владею в совершенстве
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -24,27 +21,12 @@ const ServicesSection = () => {
                   <Icon name="Scissors" size={32} className="text-gold" />
                 </div>
                 <h3 className="text-2xl font-heading font-semibold mb-4 text-black">
-                  Мужская депиляция воском
+                  Депиляция воском
                 </h3>
                 <p className="text-steel mb-6 leading-relaxed">
-                  Удаляю нежелательные волосы качественным воском. 
-                  Делаю это быстро и практически безболезненно. 
-                  Эффект держится до 6 недель.
+                  Удаление волос в любых зонах — от бороды до бикини. Результат держится до 4–6 недель. Только профессиональный воск, только одноразовые материалы.
                 </p>
-                <div className="space-y-3 text-sm text-steel">
-                  <div className="flex items-center justify-center">
-                    <Icon name="Check" size={16} className="text-gold mr-2" />
-                    <span>Стерильность на 100%</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <Icon name="Check" size={16} className="text-gold mr-2" />
-                    <span>Комфорт во время процедуры</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <Icon name="Check" size={16} className="text-gold mr-2" />
-                    <span>Профессиональные материалы</span>
-                  </div>
-                </div>
+                <Link to="/depilyaciya/" className="text-gold text-sm font-semibold hover:opacity-80">Смотреть зоны и цены →</Link>
               </CardContent>
             </Card>
 
@@ -54,37 +36,33 @@ const ServicesSection = () => {
                   <Icon name="Sun" size={32} className="text-gold" />
                 </div>
                 <h3 className="text-2xl font-heading font-semibold mb-4 text-black">
-                  Моментальный загар
+                  Моментальный автозагар
                 </h3>
                 <p className="text-steel mb-6 leading-relaxed">
-                  Наношу профессиональный автозагар, который даёт естественный оттенок. 
-                  Результат виден уже через 2-3 часа. Никакого вреда для кожи.
+                  Ровный загар без солнца и солярия — за один визит. Подбираю оттенок под ваш тон кожи. Результат виден сразу, держится до 10 дней.
                 </p>
-                <div className="space-y-3 text-sm text-steel">
-                  <div className="flex items-center justify-center">
-                    <Icon name="Check" size={16} className="text-gold mr-2" />
-                    <span>Равномерное нанесение</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <Icon name="Check" size={16} className="text-gold mr-2" />
-                    <span>Естественный цвет</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <Icon name="Check" size={16} className="text-gold mr-2" />
-                    <span>Держится 7-10 дней</span>
-                  </div>
-                </div>
+                <Link to="/zagar/" className="text-gold text-sm font-semibold hover:opacity-80">Подробнее об автозагаре →</Link>
               </CardContent>
             </Card>
           </div>
 
           <div className="bg-gold/5 border border-gold/30 rounded-lg p-6 max-w-4xl mx-auto mt-8">
             <h2 className="text-xl font-heading font-bold text-black mb-3">
-              Воск, не шугаринг и не лазер
+              Почему воск — и никак иначе
             </h2>
             <p className="text-steel leading-relaxed">
-              Я работаю только с воском — проверенной техникой удаления волос. Восковая депиляция отличается от шугаринга составом и способом нанесения. Для мужской кожи воск даёт чистый результат на 4–6 недель без раздражения. Я не делаю шугаринг и лазерную эпиляцию — только воск, только мужчины.
+              Я работаю исключительно воском — и это осознанный выбор, а не ограничение.
             </p>
+            <p className="text-steel leading-relaxed mt-3">
+              Воск удаляет волос с корнем и захватывает даже короткие волоски от 3 мм. Он отлично работает на грубых мужских волосах — там, где шугаринг часто скользит или рвёт волос, а не вытягивает.
+            </p>
+            <p className="text-steel leading-relaxed mt-3">
+              Шугаринг — хороший метод, но он создан под более тонкие и мягкие волосы. На спине, груди или в зоне бикини у мужчин он нередко даёт вросшие волосы и требует повторных проходов.
+            </p>
+            <p className="text-steel leading-relaxed mt-3">
+              Лазер — это навсегда, дорого и требует курса из 6–8 сеансов. Если вы ещё не готовы к постоянному удалению — воск даёт отличный результат здесь и сейчас.
+            </p>
+            <Link to="/blog/shugaring-vs-vosk/" className="text-gold text-sm font-semibold hover:opacity-80 mt-3 inline-block">Подробнее о разнице между воском и шугарингом →</Link>
           </div>
         </div>
       </section>
@@ -94,71 +72,57 @@ const ServicesSection = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl lg:text-4xl font-heading font-bold text-black mb-4">
-              Мужской прайс
+              Прайс на депиляцию
             </h2>
-            <p className="text-lg text-steel">
-              Честные цены на все процедуры
-            </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <Card className="bg-white shadow-xl border-l-4 border-l-gold">
               <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-heading font-semibold text-black mb-6">
-                      Восковая депиляция
-                    </h3>
-                    <div className="space-y-3 text-steel">
-                      <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                        <span><span>Окантовка бороды воском</span></span>
-                        <span className="font-semibold text-gold">1000₽</span>
-                      </div>
-                      <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                        <span>Уши / Нос</span>
-                        <span className="font-semibold text-gold">700₽</span>
-                      </div>
-                      <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                        <span>Подмышки</span>
-                        <span className="font-semibold text-gold">1000₽</span>
-                      </div>
-                      <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                        <span>Руки до локтя</span>
-                        <span className="font-semibold text-gold">2000₽</span>
-                      </div>
-                      <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                        <span>Руки полностью</span>
-                        <span className="font-semibold text-gold">2500₽</span>
-                      </div>
-                      <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                        <span>Спина / Торс</span>
-                        <span className="font-semibold text-gold">3000₽</span>
-                      </div>
-                      <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                        <span>Ноги полностью</span>
-                        <span className="font-semibold text-gold">4000₽</span>
-                      </div>
-                      <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                        <span>Голени</span>
-                        <span className="font-semibold text-gold">2000₽</span>
-                      </div>
-                    </div>
+                <div className="space-y-3 text-steel">
+                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                    <span>Борода / окантовка</span>
+                    <span className="font-semibold text-gold">1 000 ₽</span>
                   </div>
-
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-heading font-semibold text-black mb-6">
-                      Мужская депиляция бикини
-                    </h3>
-                    <div className="space-y-3 text-steel">
-                      <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                        <span>Бикини. Глубокое</span>
-                        <span className="font-semibold text-gold">3000₽</span>
-                      </div>
-                      <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                        <span>Бикини. Классика</span>
-                        <span className="font-semibold text-gold">2500₽</span>
-                      </div>
-                    </div>
+                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                    <span>Подмышки</span>
+                    <span className="font-semibold text-gold">700 ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                    <span>Грудь</span>
+                    <span className="font-semibold text-gold">1 200 ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                    <span>Живот</span>
+                    <span className="font-semibold text-gold">800 ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                    <span>Спина</span>
+                    <span className="font-semibold text-gold">1 500 ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                    <span>Ягодицы</span>
+                    <span className="font-semibold text-gold">1 000 ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                    <span>Классическое бикини</span>
+                    <span className="font-semibold text-gold">2 500 ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                    <span>Глубокое бикини</span>
+                    <span className="font-semibold text-gold">3 000 ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                    <span>Руки (полностью)</span>
+                    <span className="font-semibold text-gold">1 200 ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                    <span>Ноги (полностью)</span>
+                    <span className="font-semibold text-gold">2 000 ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                    <span>Голень</span>
+                    <span className="font-semibold text-gold">1 000 ₽</span>
                   </div>
                 </div>
 

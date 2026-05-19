@@ -26,7 +26,7 @@ const Zagar = () => {
             Моментальный автозагар в Екатеринбурге
           </h1>
           <p className="text-white/60 text-sm sm:text-base mb-8 tracking-wide">
-            Для мужчин&nbsp;|&nbsp;ул. Культуры 2&nbsp;|&nbsp;10:00–20:00
+            Ровный натуральный загар без солнца и солярия — за один визит. Подбираю оттенок под ваш тон кожи.
           </p>
           <a
             href={TELEGRAM_URL}
@@ -54,7 +54,7 @@ const Zagar = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl lg:text-4xl font-heading font-bold text-black mb-4">
-              Как проходит процедура автозагара
+              Три шага до результата
             </h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -67,7 +67,7 @@ const Zagar = () => {
                   Подбор оттенка
                 </h3>
                 <p className="text-steel text-sm leading-relaxed">
-                  Подбираю оттенок под ваш тон кожи — результат выглядит естественно.
+                  Оцениваю ваш естественный тон кожи и обсуждаем желаемый результат — лёгкий загар или выраженный тёмный тон. Никакой самодеятельности: оттенок подбирается индивидуально.
                 </p>
               </CardContent>
             </Card>
@@ -81,7 +81,7 @@ const Zagar = () => {
                   Нанесение
                 </h3>
                 <p className="text-steel text-sm leading-relaxed">
-                  Равномерно наношу профессиональный автозагар — без полос и пятен.
+                  Состав наносится профессиональным пульверизатором равномерно по всему телу. Занимает 15–20 минут. Результат виден уже в процессе.
                 </p>
               </CardContent>
             </Card>
@@ -95,7 +95,7 @@ const Zagar = () => {
                   Результат
                 </h3>
                 <p className="text-steel text-sm leading-relaxed">
-                  Первый результат через 2–3 часа, окончательный оттенок формируется за сутки.
+                  Загар проявляется в течение 4–8 часов и держится до 7–10 дней. Со временем смывается равномерно — без пятен, если соблюдать уход.
                 </p>
               </CardContent>
             </Card>
@@ -108,7 +108,7 @@ const Zagar = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl lg:text-4xl font-heading font-bold text-black mb-4">
-              Цены на автозагар екатеринбург
+              Стоимость
             </h2>
           </div>
           <div className="max-w-xl mx-auto">
@@ -131,7 +131,7 @@ const Zagar = () => {
                     className="bg-gold text-black hover:bg-gold/85 font-semibold px-8"
                   >
                     <Icon name="Send" className="w-4 h-4 mr-2" />
-                    Уточнить цену в Telegram
+                    Узнать цену в Telegram @sugar_TS
                   </Button>
                 </a>
               </CardContent>
@@ -144,31 +144,31 @@ const Zagar = () => {
       <section className="bg-white py-12">
         <div className="container mx-auto px-4 max-w-2xl">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-8 text-center">
-            Уход после моментального загара
+            Как ухаживать за загаром
           </h2>
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <Icon name="Check" size={20} className="text-gold mt-0.5 shrink-0" />
               <span className="text-steel leading-relaxed">
-                Не трите кожу мочалкой в первые сутки
+                Первые 8 часов — не мочить кожу, не потеть, избегать тесной одежды. Дайте составу зафиксироваться.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Icon name="Check" size={20} className="text-gold mt-0.5 shrink-0" />
               <span className="text-steel leading-relaxed">
-                Увлажняйте кожу ежедневно
+                Первый душ — тёплая вода без мочалки и агрессивных гелей. Лёгкими движениями, без растирания.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Icon name="Check" size={20} className="text-gold mt-0.5 shrink-0" />
               <span className="text-steel leading-relaxed">
-                Избегайте длительных горячих ванн в первые сутки
+                Увлажнение — наносите лосьон для тела ежедневно. Это продлевает ровность загара и замедляет его смывание.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Icon name="Check" size={20} className="text-gold mt-0.5 shrink-0" />
               <span className="text-steel leading-relaxed">
-                Держится 7–10 дней при правильном уходе
+                Скраб — не раньше 5-го дня — когда захотите смыть загар равномерно, используйте мягкий скраб. Не раньше, иначе загар сойдёт пятнами.
               </span>
             </li>
           </ul>
@@ -182,6 +182,15 @@ const Zagar = () => {
             Частые вопросы об автозагаре
           </h2>
           <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="q0">
+              <AccordionTrigger className="text-left font-heading font-semibold text-black hover:no-underline hover:text-gold transition-colors">
+                Буду ли я выглядеть «оранжевым»?
+              </AccordionTrigger>
+              <AccordionContent className="text-steel leading-relaxed">
+                Нет. Современные составы дают натуральный золотистый или бронзовый оттенок. Цвет подбирается под ваш тип кожи — результат выглядит как настоящий загар.
+              </AccordionContent>
+            </AccordionItem>
+
             <AccordionItem value="q1">
               <AccordionTrigger className="text-left font-heading font-semibold text-black hover:no-underline hover:text-gold transition-colors">
                 Как долго держится автозагар?
@@ -209,6 +218,15 @@ const Zagar = () => {
               <AccordionContent className="text-steel leading-relaxed">
                 Кожа должна быть чистой, без кремов и дезодорантов. Желательно сделать скраб
                 за день до процедуры.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="q-combo">
+              <AccordionTrigger className="text-left font-heading font-semibold text-black hover:no-underline hover:text-gold transition-colors">
+                Подходит ли автозагар после депиляции?
+              </AccordionTrigger>
+              <AccordionContent className="text-steel leading-relaxed">
+                Не сразу. После депиляции подождите 48 часов — кожа должна успокоиться. Тогда загар ляжет ровно и продержится дольше.
               </AccordionContent>
             </AccordionItem>
 
@@ -242,6 +260,7 @@ const Zagar = () => {
           <p className="text-white/70 text-base mb-8 leading-relaxed">
             Натали, ул. Культуры 2, каб. 115.3. Ежедневно 10:00–20:00.
           </p>
+          <p className="text-white/60 text-sm mb-4">Хотите подготовиться к отпуску или событию — запишитесь заранее.</p>
           <a
             href={TELEGRAM_URL}
             target="_blank"

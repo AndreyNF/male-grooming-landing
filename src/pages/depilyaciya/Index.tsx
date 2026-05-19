@@ -8,25 +8,29 @@ const TELEGRAM_URL = 'https://t.me/sugar_TS';
 
 const HUB_CARDS = [
   {
-    title: 'Окантовка бороды воском',
+    title: 'Борода и окантовка',
+    desc: 'Чёткая линия без бритвы — воском по контуру.',
     price: '1000 ₽',
     icon: 'Scissors',
     to: '/depilyaciya/boroda/',
   },
   {
-    title: 'Депиляция бикини для мужчин',
+    title: 'Зона бикини',
+    desc: 'Классическое и глубокое бикини. Деликатно, профессионально.',
     price: 'от 2500 ₽',
     icon: 'Flame',
     to: '/depilyaciya/bikini/',
   },
   {
-    title: 'Депиляция ног, рук и спины',
+    title: 'Ноги, руки, спина',
+    desc: 'Крупные зоны — быстро и эффективно.',
     price: 'от 2000 ₽',
     icon: 'Zap',
     to: '/depilyaciya/nogi-ruki/',
   },
   {
-    title: 'Восковая депиляция воском',
+    title: 'Почему воск?',
+    desc: 'Воск vs шугаринг — в чём разница и что лучше для мужчин.',
     price: 'все зоны',
     icon: 'Star',
     to: '/depilyaciya/voskom/',
@@ -47,7 +51,7 @@ const DepilyaciyaIndex = () => {
             Мужская депиляция — только для мужчин
           </h1>
           <p className="text-white/60 text-sm sm:text-base mb-8 tracking-wide">
-            Екатеринбург, ул. Культуры 2&nbsp;|&nbsp;Воском, не шугаринг&nbsp;|&nbsp;с 2021 года
+            Работаю исключительно с мужчинами с 2021 года. Профессиональный воск, стерильный кабинет, без лишних вопросов.
           </p>
           <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
             <Button
@@ -81,7 +85,7 @@ const DepilyaciyaIndex = () => {
                       <p className="font-heading font-semibold text-black text-base leading-snug group-hover:text-gold transition-colors">
                         {card.title}
                       </p>
-                      <p className="text-steel text-sm mt-1">{card.price}</p>
+                      <p className="text-steel text-sm mt-1">{card.desc}</p>
                     </div>
                     <Icon
                       name="ChevronRight"
@@ -100,14 +104,14 @@ const DepilyaciyaIndex = () => {
       <section className="bg-gray-50 py-12">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-6 text-center">
-            Почему воск, а не шугаринг
+            Воск — это выбор, а не компромисс
           </h2>
           <p className="text-steel text-base leading-relaxed text-center">
-            Я работаю только с воском — проверенной техникой удаления волос. Восковая депиляция
-            отличается от шугаринга составом и способом нанесения. Для мужской кожи воск даёт
-            чистый результат на 4–6 недель. Я не делаю шугаринг и лазерную эпиляцию — только
-            воск, только мужчины.
+            Многие салоны предлагают мужчинам шугаринг — потому что это удобно для мастера. Но шугаринг создавался под более тонкие и мягкие волосы. На жёстком мужском покрове — особенно на спине, груди и в зоне бикини — воск работает точнее: захватывает волос с корнем, не рвёт его и меньше раздражает кожу при грамотном применении. Я работаю только воском — горячим и плёночным, в зависимости от зоны. Это даёт чистый результат даже там, где шугаринг пасует.
           </p>
+          <div className="text-center mt-3">
+            <Link to="/blog/shugaring-vs-vosk/" className="text-gold text-sm font-semibold hover:opacity-80 mt-3 inline-block">Читать подробное сравнение →</Link>
+          </div>
         </div>
       </section>
 
