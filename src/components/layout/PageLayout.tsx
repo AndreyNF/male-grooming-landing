@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
@@ -43,31 +44,21 @@ const PageLayout: React.FC<PageLayoutProps> = ({
     setMenuOpen(false);
   }, [pathname]);
 
-  useEffect(() => {
-    document.title = title;
 
-    let metaDesc = document.querySelector<HTMLMetaElement>(
-      'meta[name="description"]'
-    );
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.name = "description";
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.content = description;
-
-    let linkCanonical = document.querySelector<HTMLLinkElement>(
-      'link[rel="canonical"]'
-    );
-    if (!linkCanonical) {
-      linkCanonical = document.createElement("link");
-      linkCanonical.rel = "canonical";
-      document.head.appendChild(linkCanonical);
-    }
-    linkCanonical.href = canonical;
-  }, [title, description, canonical]);
 
   return (
+    <>
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <link rel="canonical" href={canonical} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta name="twitter:url" content={canonical} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+    </Helmet>
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       {/* Navigation */}
       <header className="sticky top-0 z-40 bg-black border-b border-[hsl(var(--gold)/0.25)]">
@@ -231,6 +222,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
         </a>
       </div>
     </div>
+    </>
   );
 };
 
