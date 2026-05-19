@@ -112,9 +112,46 @@ export default function Admin() {
       </header>
 
       <div className="container mx-auto px-4 py-8 max-w-2xl">
+
+        {/* Инструкция */}
+        <div className="bg-white border border-gray-200 rounded-xl mb-8 overflow-hidden">
+          <div className="bg-black px-5 py-3 flex items-center gap-2">
+            <Icon name="BookOpen" size={15} className="text-gold" />
+            <span className="text-gold font-heading font-semibold text-sm uppercase tracking-wide">Как пользоваться</span>
+          </div>
+          <div className="px-5 py-4 space-y-4 text-sm text-steel">
+            <div className="flex gap-3">
+              <span className="w-6 h-6 rounded-full bg-black text-gold font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+              <p>Найди нужную зону в списке ниже. Зоны разбиты по категориям: <strong className="text-black">Лицо, Тело, Бикини, Ноги и руки</strong>.</p>
+            </div>
+            <div className="flex gap-3">
+              <span className="w-6 h-6 rounded-full bg-black text-gold font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+              <p>Нажми на цену — она выделится и появится поле для ввода. Введи новую цену в формате <strong className="text-black">1 500 ₽</strong> (с пробелом и знаком рубля).</p>
+            </div>
+            <div className="flex gap-3">
+              <span className="w-6 h-6 rounded-full bg-black text-gold font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+              <p>Нажми <strong className="text-black">«Сохранить»</strong> или клавишу <strong className="text-black">Enter</strong>. Цена изменится на сайте мгновенно для всех посетителей.</p>
+            </div>
+            <div className="border-t border-gray-100 pt-3 flex flex-col gap-1.5">
+              <div className="flex items-start gap-2">
+                <Icon name="AlertCircle" size={14} className="text-amber-500 shrink-0 mt-0.5" />
+                <p>Формат цены важен — вводи именно так: <code className="bg-gray-100 px-1 rounded text-black">1 500 ₽</code> или <code className="bg-gray-100 px-1 rounded text-black">700 ₽</code>.</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <Icon name="AlertCircle" size={14} className="text-amber-500 shrink-0 mt-0.5" />
+                <p>Изменить название зоны здесь нельзя — только цену. Для переименования обратись к разработчику.</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <Icon name="AlertCircle" size={14} className="text-amber-500 shrink-0 mt-0.5" />
+                <p>Если цена не обновилась на сайте — обнови страницу (F5 или потяни вниз на телефоне).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="mb-6">
-          <h2 className="text-xl font-heading font-bold text-black">Управление ценами</h2>
-          <p className="text-steel text-sm mt-1">Нажмите на цену чтобы изменить. Изменения отображаются на сайте сразу.</p>
+          <h2 className="text-xl font-heading font-bold text-black">Цены на услуги</h2>
+          <p className="text-steel text-sm mt-1">Нажмите на цену чтобы изменить.</p>
         </div>
 
         {loading ? (
