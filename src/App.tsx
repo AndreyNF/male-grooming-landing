@@ -16,6 +16,7 @@ import DepilyaciyaNogiRuki from "./pages/depilyaciya/NogiRuki";
 import DepilyaciyaEkaterinburg from "./pages/depilyaciya/Ekaterinburg";
 import ShugaringVsVosk from "./pages/blog/ShugaringVsVosk";
 import Kontakty from "./pages/Kontakty";
+import Admin from "./pages/Admin";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/depilyaciya/ekaterinburg/" element={<DepilyaciyaEkaterinburg />} />
           <Route path="/blog/shugaring-vs-vosk/" element={<ShugaringVsVosk />} />
           <Route path="/kontakty/" element={<Kontakty />} />
+          <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

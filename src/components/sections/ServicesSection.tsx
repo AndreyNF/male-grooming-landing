@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { usePrices } from '@/hooks/usePrices';
 
 const PRICE_CATEGORIES = [
   { id: 'all', label: 'Все' },
@@ -11,23 +12,11 @@ const PRICE_CATEGORIES = [
   { id: 'legs', label: 'Ноги и руки' },
 ];
 
-const PRICE_ITEMS = [
-  { label: 'Борода / окантовка', price: '1 000 ₽', cat: 'face' },
-  { label: 'Подмышки', price: '700 ₽', cat: 'body' },
-  { label: 'Грудь', price: '1 200 ₽', cat: 'body' },
-  { label: 'Живот', price: '800 ₽', cat: 'body' },
-  { label: 'Спина', price: '1 500 ₽', cat: 'body' },
-  { label: 'Ягодицы', price: '1 000 ₽', cat: 'body' },
-  { label: 'Классическое бикини', price: '2 500 ₽', cat: 'bikini' },
-  { label: 'Глубокое бикини', price: '3 000 ₽', cat: 'bikini' },
-  { label: 'Руки (полностью)', price: '1 200 ₽', cat: 'legs' },
-  { label: 'Ноги (полностью)', price: '2 000 ₽', cat: 'legs' },
-  { label: 'Голень', price: '1 000 ₽', cat: 'legs' },
-];
-
 const ServicesSection = () => {
   const [activecat, setActivecat] = useState('all');
-  const filtered = activecat === 'all' ? PRICE_ITEMS : PRICE_ITEMS.filter(i => i.cat === activecat);
+  const { prices, loading } = usePrices();
+  const items = prices.map(p => ({ label: p.label, price: p.price, cat: p.category }));
+  const filtered = activecat === 'all' ? items : items.filter(i => i.cat === activecat);
 
   return (
     <>
@@ -123,7 +112,9 @@ const ServicesSection = () => {
             <Card className="bg-white shadow-xl border-l-4 border-l-gold">
               <CardContent className="p-5 sm:p-8">
                 <div className="space-y-3 text-steel">
-                  {filtered.map(item => (
+                  {loading ? (
+                    <p className="text-steel/50 text-sm text-center py-4">Загрузка...</p>
+                  ) : filtered.map(item => (
                     <div key={item.label} className="flex justify-between items-center border-b border-gray-200 pb-2">
                       <span>{item.label}</span>
                       <span className="font-semibold text-gold shrink-0 ml-4">{item.price}</span>

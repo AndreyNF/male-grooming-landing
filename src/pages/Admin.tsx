@@ -1,0 +1,186 @@
+import { useState } from 'react';
+import { usePrices, updatePrice, PriceItem } from '@/hooks/usePrices';
+import { Button } from '@/components/ui/button';
+import Icon from '@/components/ui/icon';
+
+const CATEGORY_LABELS: Record<string, string> = {
+  face: 'Лицо',
+  body: 'Тело',
+  bikini: 'Бикини',
+  legs: 'Ноги и руки',
+};
+
+export default function Admin() {
+  const [password, setPassword] = useState('');
+  const [authed, setAuthed] = useState(false);
+  const [authError, setAuthError] = useState('');
+  const [editSlug, setEditSlug] = useState<string | null>(null);
+  const [editValue, setEditValue] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [saveMsg, setSaveMsg] = useState('');
+
+  const { prices, loading } = usePrices();
+
+  const handleLogin = async () => {
+    setAuthError('');
+    const res = await fetch('https://functions.poehali.dev/5fa88c34-bc2c-4881-8f1f-6ee77b9ec8ad', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Password': password },
+      body: JSON.stringify({ slug: '__check__', price: '__check__' }),
+    });
+    if (res.status === 404) {
+      setAuthed(true);
+    } else if (res.status === 401) {
+      setAuthError('Неверный пароль');
+    } else {
+      setAuthed(true);
+    }
+  };
+
+  const startEdit = (item: PriceItem) => {
+    setEditSlug(item.slug);
+    setEditValue(item.price);
+    setSaveMsg('');
+  };
+
+  const saveEdit = async () => {
+    if (!editSlug) return;
+    setSaving(true);
+    setSaveMsg('');
+    const result = await updatePrice(editSlug, editValue, password);
+    setSaving(false);
+    if (result.ok) {
+      setSaveMsg('Сохранено ✓');
+      setEditSlug(null);
+      window.location.reload();
+    } else {
+      setSaveMsg(result.error || 'Ошибка');
+    }
+  };
+
+  const grouped = prices.reduce<Record<string, PriceItem[]>>((acc, item) => {
+    if (!acc[item.category]) acc[item.category] = [];
+    acc[item.category].push(item);
+    return acc;
+  }, {});
+
+  if (!authed) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center px-4">
+        <div className="bg-white rounded-2xl p-8 w-full max-w-sm shadow-2xl">
+          <div className="text-center mb-6">
+            <h1 className="text-2xl font-heading font-bold text-black mb-1">Админ-панель</h1>
+            <p className="text-steel text-sm">Управление ценами · sugarts.ru</p>
+          </div>
+          <div className="space-y-4">
+            <div>
+              <label className="text-sm font-medium text-black mb-1 block">Пароль</label>
+              <input
+                type="password"
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handleLogin()}
+                className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-gold"
+                placeholder="Введите пароль"
+                autoFocus
+              />
+              {authError && <p className="text-red-500 text-xs mt-1">{authError}</p>}
+            </div>
+            <Button onClick={handleLogin} className="w-full bg-black text-gold hover:bg-black/85 font-semibold">
+              Войти
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-black border-b border-gold/20 sticky top-0 z-10">
+        <div className="container mx-auto px-4 h-14 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="font-heading font-bold text-gold uppercase tracking-widest">Натали</span>
+            <span className="text-white/40 text-sm">· Цены</span>
+          </div>
+          <a href="/" className="text-white/60 hover:text-white text-sm transition-colors flex items-center gap-1">
+            <Icon name="ArrowLeft" size={14} />
+            На сайт
+          </a>
+        </div>
+      </header>
+
+      <div className="container mx-auto px-4 py-8 max-w-2xl">
+        <div className="mb-6">
+          <h2 className="text-xl font-heading font-bold text-black">Управление ценами</h2>
+          <p className="text-steel text-sm mt-1">Нажмите на цену чтобы изменить. Изменения отображаются на сайте сразу.</p>
+        </div>
+
+        {loading ? (
+          <div className="text-center py-12 text-steel">Загрузка...</div>
+        ) : (
+          <div className="space-y-6">
+            {Object.entries(CATEGORY_LABELS).map(([cat, catLabel]) => {
+              const items = grouped[cat] || [];
+              if (!items.length) return null;
+              return (
+                <div key={cat} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                  <div className="bg-black px-5 py-3">
+                    <h3 className="text-gold font-heading font-semibold text-sm uppercase tracking-wide">{catLabel}</h3>
+                  </div>
+                  <div className="divide-y divide-gray-100">
+                    {items.map(item => (
+                      <div key={item.slug} className="flex items-center justify-between px-5 py-3 gap-4">
+                        <span className="text-black text-sm">{item.label}</span>
+                        <div className="flex items-center gap-2 shrink-0">
+                          {editSlug === item.slug ? (
+                            <>
+                              <input
+                                type="text"
+                                value={editValue}
+                                onChange={e => setEditValue(e.target.value)}
+                                onKeyDown={e => e.key === 'Enter' && saveEdit()}
+                                className="border border-gold rounded px-2 py-1 text-sm w-28 focus:outline-none text-right"
+                                autoFocus
+                              />
+                              <button
+                                onClick={saveEdit}
+                                disabled={saving}
+                                className="text-xs bg-black text-gold px-3 py-1.5 rounded font-medium hover:bg-black/80 disabled:opacity-50"
+                              >
+                                {saving ? '...' : 'Сохранить'}
+                              </button>
+                              <button
+                                onClick={() => setEditSlug(null)}
+                                className="text-steel text-xs hover:text-black"
+                              >
+                                Отмена
+                              </button>
+                            </>
+                          ) : (
+                            <button
+                              onClick={() => startEdit(item)}
+                              className="text-gold font-semibold text-sm hover:underline flex items-center gap-1"
+                            >
+                              {item.price}
+                              <Icon name="Pencil" size={12} className="text-gold/60" />
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {saveMsg && (
+          <div className="mt-4 text-center text-sm text-green-600 font-medium">{saveMsg}</div>
+        )}
+      </div>
+    </div>
+  );
+}
