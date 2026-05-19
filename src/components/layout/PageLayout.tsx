@@ -17,7 +17,7 @@ const NAV_LINKS = [
   { label: "Депиляция", to: "/depilyaciya/" },
   { label: "Автозагар", to: "/zagar/" },
   { label: "Цены", to: "/depilyaciya/voskom/" },
-  { label: "Екатеринбург", to: "/depilyaciya/ekaterinburg/" },
+  { label: "Контакты", to: "/kontakty/" },
 ];
 
 const FOOTER_LINKS = [
@@ -26,6 +26,7 @@ const FOOTER_LINKS = [
   { label: "Бикини", to: "/depilyaciya/bikini/" },
   { label: "Ноги и руки", to: "/depilyaciya/nogi-ruki/" },
   { label: "Автозагар", to: "/zagar/" },
+  { label: "Контакты", to: "/kontakty/" },
   { label: "Воск vs шугаринг", to: "/blog/shugaring-vs-vosk/" },
 ];
 

@@ -1,8 +1,34 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
+const PRICE_CATEGORIES = [
+  { id: 'all', label: 'Все' },
+  { id: 'face', label: 'Лицо' },
+  { id: 'body', label: 'Тело' },
+  { id: 'bikini', label: 'Бикини' },
+  { id: 'legs', label: 'Ноги и руки' },
+];
+
+const PRICE_ITEMS = [
+  { label: 'Борода / окантовка', price: '1 000 ₽', cat: 'face' },
+  { label: 'Подмышки', price: '700 ₽', cat: 'body' },
+  { label: 'Грудь', price: '1 200 ₽', cat: 'body' },
+  { label: 'Живот', price: '800 ₽', cat: 'body' },
+  { label: 'Спина', price: '1 500 ₽', cat: 'body' },
+  { label: 'Ягодицы', price: '1 000 ₽', cat: 'body' },
+  { label: 'Классическое бикини', price: '2 500 ₽', cat: 'bikini' },
+  { label: 'Глубокое бикини', price: '3 000 ₽', cat: 'bikini' },
+  { label: 'Руки (полностью)', price: '1 200 ₽', cat: 'legs' },
+  { label: 'Ноги (полностью)', price: '2 000 ₽', cat: 'legs' },
+  { label: 'Голень', price: '1 000 ₽', cat: 'legs' },
+];
+
 const ServicesSection = () => {
+  const [activecat, setActivecat] = useState('all');
+  const filtered = activecat === 'all' ? PRICE_ITEMS : PRICE_ITEMS.filter(i => i.cat === activecat);
+
   return (
     <>
       {/* Services Section */}
@@ -70,71 +96,50 @@ const ServicesSection = () => {
       {/* Pricing Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in">
+          <div className="text-center mb-8 animate-fade-in">
             <h2 className="text-3xl lg:text-4xl font-heading font-bold text-black mb-4">
               Прайс на депиляцию
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          {/* Фильтр */}
+          <div className="flex flex-wrap gap-2 justify-center mb-8">
+            {PRICE_CATEGORIES.map(cat => (
+              <button
+                key={cat.id}
+                onClick={() => setActivecat(cat.id)}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors border ${
+                  activecat === cat.id
+                    ? 'bg-black text-gold border-black'
+                    : 'bg-white text-steel border-gray-200 hover:border-gold hover:text-black'
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="max-w-xl mx-auto">
             <Card className="bg-white shadow-xl border-l-4 border-l-gold">
-              <CardContent className="p-8">
+              <CardContent className="p-5 sm:p-8">
                 <div className="space-y-3 text-steel">
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span>Борода / окантовка</span>
-                    <span className="font-semibold text-gold">1 000 ₽</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span>Подмышки</span>
-                    <span className="font-semibold text-gold">700 ₽</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span>Грудь</span>
-                    <span className="font-semibold text-gold">1 200 ₽</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span>Живот</span>
-                    <span className="font-semibold text-gold">800 ₽</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span>Спина</span>
-                    <span className="font-semibold text-gold">1 500 ₽</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span>Ягодицы</span>
-                    <span className="font-semibold text-gold">1 000 ₽</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span>Классическое бикини</span>
-                    <span className="font-semibold text-gold">2 500 ₽</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span>Глубокое бикини</span>
-                    <span className="font-semibold text-gold">3 000 ₽</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span>Руки (полностью)</span>
-                    <span className="font-semibold text-gold">1 200 ₽</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span>Ноги (полностью)</span>
-                    <span className="font-semibold text-gold">2 000 ₽</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span>Голень</span>
-                    <span className="font-semibold text-gold">1 000 ₽</span>
-                  </div>
+                  {filtered.map(item => (
+                    <div key={item.label} className="flex justify-between items-center border-b border-gray-200 pb-2">
+                      <span>{item.label}</span>
+                      <span className="font-semibold text-gold shrink-0 ml-4">{item.price}</span>
+                    </div>
+                  ))}
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-gray-200">
-                  <div className="bg-gold/10 rounded-lg p-6 text-center">
-                    <h2 className="text-xl font-heading font-semibold text-black mb-2">
+                  <div className="bg-gold/10 rounded-lg p-5 text-center">
+                    <h2 className="text-lg font-heading font-semibold text-black mb-1">
                       Моментальный загар в Екатеринбурге
                     </h2>
-                    <p className="text-steel">Цена зависит от зоны покрытия. Обсуждаем индивидуально при записи.</p>
+                    <p className="text-steel text-sm">Цена зависит от зоны покрытия. Обсуждаем индивидуально при записи.</p>
                   </div>
                   <div className="text-center mt-4">
-                    <Link to="/zagar/" className="text-gold underline font-semibold">
+                    <Link to="/zagar/" className="text-gold underline font-semibold text-sm">
                       Подробнее о моментальном загаре →
                     </Link>
                   </div>

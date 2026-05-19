@@ -20,6 +20,17 @@ const HeroSection = () => {
                 Записаться можно через Telegram — отвечаю ежедневно с 10:00 до 20:00. Без предоплаты.
               </p>
             </div>
+            <div className="flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gold/10 border border-gold/30 rounded-full text-sm text-gold font-medium">
+                <Icon name="Star" size={13} />с 2021 года
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gold/10 border border-gold/30 rounded-full text-sm text-gold font-medium">
+                <Icon name="Shield" size={13} />только мужчины
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gold/10 border border-gold/30 rounded-full text-sm text-gold font-medium">
+                <Icon name="Sparkles" size={13} />стерильно
+              </span>
+            </div>
             <div className="flex flex-wrap gap-4">
               <a href="https://t.me/sugar_TS" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90 font-semibold px-8 py-3 text-lg animate-scale-in shadow-lg">Записаться в Telegram</Button>
