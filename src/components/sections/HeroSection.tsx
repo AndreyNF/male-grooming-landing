@@ -35,8 +35,8 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-steel/30 to-gold/20 rounded-full blur-3xl opacity-30 -z-10 scale-110"></div>
               <div className="relative overflow-hidden rounded-2xl shadow-2xl border-2 border-steel/40">
                 <img 
-                  src="https://cdn.poehali.dev/files/1e345896-784d-4147-a1c0-6145871dfccb.jpg" 
-                  alt="Натали - мастер депиляции для мужчин" 
+                  src="https://cdn.poehali.dev/projects/f9471a49-697e-4896-8b0f-bb9d1e5e5bef/bucket/53e3b7bf-b695-4792-a3f4-ce38cf94a6bd.png" 
+                  alt="Натали — мастер мужской депиляции воском" 
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -51,8 +51,8 @@ const HeroSection = () => {
           <div className="relative w-full max-w-sm mx-auto mb-8">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl border-2 border-steel/40">
               <img 
-                src="https://cdn.poehali.dev/files/1e345896-784d-4147-a1c0-6145871dfccb.jpg" 
-                alt="Натали - мастер депиляции для мужчин" 
+                src="https://cdn.poehali.dev/projects/f9471a49-697e-4896-8b0f-bb9d1e5e5bef/bucket/53e3b7bf-b695-4792-a3f4-ce38cf94a6bd.png" 
+                alt="Натали — мастер мужской депиляции воском" 
                 className="w-full h-auto object-cover"
               />
             </div>

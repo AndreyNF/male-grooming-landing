@@ -48,40 +48,48 @@ const ShugaringVsVosk = () => {
             Шугаринг vs воск: сравнение
           </h2>
 
-          <div className="overflow-x-auto">
-            {/* Header row */}
-            <div className="grid grid-cols-3 gap-px bg-gold/30 rounded-t-lg overflow-hidden mb-px min-w-[400px]">
-              <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide">
-                Критерий
-              </div>
-              <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide text-center">
-                Воск
-              </div>
-              <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide text-center">
-                Шугаринг
-              </div>
+          {/* Desktop таблица */}
+          <div className="hidden sm:block overflow-x-auto">
+            <div className="grid grid-cols-3 gap-px bg-gold/30 rounded-t-lg overflow-hidden mb-px">
+              <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide">Критерий</div>
+              <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide text-center">Воск</div>
+              <div className="bg-black px-4 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-wide text-center">Шугаринг</div>
             </div>
-
-            {/* Data rows */}
-            <div className="rounded-b-lg overflow-hidden border border-gray-200 divide-y divide-gray-200 min-w-[400px]">
+            <div className="rounded-b-lg overflow-hidden border border-gray-200 divide-y divide-gray-200">
               {COMPARE_ROWS.map((row, idx) => (
-                <div
-                  key={row.criteria}
-                  className={`grid grid-cols-3 gap-px ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
-                >
-                  <div className="px-4 py-3 text-black font-medium text-sm">
-                    {row.criteria}
-                  </div>
+                <div key={row.criteria} className={`grid grid-cols-3 gap-px ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+                  <div className="px-4 py-3 text-black font-medium text-sm">{row.criteria}</div>
                   <div className="px-4 py-3 text-steel text-sm text-center flex items-center justify-center gap-1.5">
-                    <Icon name="Check" size={14} className="text-gold shrink-0" />
-                    {row.wax}
+                    <Icon name="Check" size={14} className="text-gold shrink-0" />{row.wax}
                   </div>
-                  <div className="px-4 py-3 text-steel text-sm text-center">
-                    {row.sugar}
-                  </div>
+                  <div className="px-4 py-3 text-steel text-sm text-center">{row.sugar}</div>
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Mobile карточки */}
+          <div className="sm:hidden space-y-3">
+            {COMPARE_ROWS.map((row) => (
+              <div key={row.criteria} className="border border-gray-200 rounded-lg overflow-hidden">
+                <div className="bg-black px-4 py-2">
+                  <p className="text-gold font-heading font-semibold text-sm">{row.criteria}</p>
+                </div>
+                <div className="grid grid-cols-2 divide-x divide-gray-200">
+                  <div className="px-3 py-3 bg-white">
+                    <p className="text-xs text-gold font-semibold uppercase mb-1">Воск</p>
+                    <div className="flex items-start gap-1.5">
+                      <Icon name="Check" size={13} className="text-gold shrink-0 mt-0.5" />
+                      <p className="text-steel text-sm leading-snug">{row.wax}</p>
+                    </div>
+                  </div>
+                  <div className="px-3 py-3 bg-gray-50">
+                    <p className="text-xs text-steel/60 font-semibold uppercase mb-1">Шугаринг</p>
+                    <p className="text-steel text-sm leading-snug">{row.sugar}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
