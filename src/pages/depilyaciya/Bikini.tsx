@@ -1,0 +1,143 @@
+import { Link } from 'react-router-dom';
+import PageLayout from '@/components/layout/PageLayout';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import Icon from '@/components/ui/icon';
+
+const TELEGRAM_URL = 'https://t.me/sugar_TS';
+
+const PRICE_ROWS = [
+  { label: 'Бикини классика', price: '2500 ₽' },
+  { label: 'Бикини глубокое', price: '3000 ₽' },
+];
+
+const Bikini = () => {
+  return (
+    <PageLayout
+      title="Мужская депиляция бикини в Екатеринбурге — цены | Натали"
+      description="Мужская депиляция бикини воском. Классика 2500 ₽, глубокое 3000 ₽. Только мужчины, стерильно. ул. Культуры 2. Запись @sugar_TS."
+      canonical="https://sugarts.ru/depilyaciya/bikini/"
+    >
+      {/* Hero */}
+      <section className="bg-black text-white py-20">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <h1 className="text-4xl lg:text-5xl font-heading font-bold leading-tight text-gold mb-4">
+            Депиляция бикини для мужчин
+          </h1>
+          <p className="text-white/60 text-lg mb-8 tracking-wide">
+            Екатеринбург, ул. Культуры 2&nbsp;|&nbsp;Только мужчины&nbsp;|&nbsp;Воском
+          </p>
+          <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
+            <Button
+              size="lg"
+              className="bg-gold text-black hover:bg-gold/85 font-semibold px-8 py-3 text-lg"
+            >
+              <Icon name="Send" className="w-5 h-5 mr-2" />
+              Записаться
+            </Button>
+          </a>
+        </div>
+      </section>
+
+      {/* Прайс */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-black mb-4">
+              Цены на мужскую депиляцию бикини
+            </h2>
+          </div>
+          <div className="max-w-md mx-auto">
+            <Card className="bg-white shadow-xl border-l-4 border-l-gold">
+              <CardContent className="p-8">
+                <div className="space-y-3 text-steel">
+                  {PRICE_ROWS.map((row) => (
+                    <div
+                      key={row.label}
+                      className="flex justify-between items-center border-b border-gray-200 pb-2"
+                    >
+                      <span>{row.label}</span>
+                      <span className="font-semibold text-gold">{row.price}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Как проходит */}
+      <section className="bg-gray-50 py-12">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-3xl font-heading font-bold text-black mb-6 text-center">
+            Как проходит процедура
+          </h2>
+          <div className="space-y-4 text-steel text-base leading-relaxed">
+            <p>
+              Мужская депиляция бикини — деликатная зона, требующая особого подхода. Я работаю
+              только с мужчинами с 2021 года и знаю, как сделать процедуру максимально комфортной.
+            </p>
+            <p>
+              Использую только одноразовые расходники и профессиональный воск — никакого
+              повторного использования шпателей или полосок. Стерильность гарантирована.
+            </p>
+            <p>
+              Глубокое бикини и классика — два формата на выбор. Можно уточнить детали при
+              записи в Telegram.
+            </p>
+          </div>
+          <div className="mt-8 space-y-3">
+            {[
+              'Одноразовые расходники на каждого клиента',
+              'Профессиональный воск без раздражения',
+              'Комфортная обстановка, только мужчины',
+              'Результат держится 4–6 недель',
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <Icon name="Check" size={18} className="text-gold mt-0.5 shrink-0" />
+                <span className="text-steel">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-black py-12">
+        <div className="container mx-auto px-4 max-w-2xl text-center">
+          <h2 className="text-3xl font-heading font-bold text-gold mb-4">
+            Записаться на депиляцию бикини
+          </h2>
+          <p className="text-white/70 text-base mb-8">
+            Натали, ул. Культуры 2, каб. 115.3. Ежедневно 10:00–20:00.
+          </p>
+          <a
+            href={TELEGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mb-6"
+          >
+            <Button
+              size="lg"
+              className="bg-gold text-black hover:bg-gold/85 font-semibold px-10 py-3 text-lg"
+            >
+              <Icon name="Send" className="w-5 h-5 mr-2" />
+              Написать @sugar_TS
+            </Button>
+          </a>
+          <div>
+            <Link
+              to="/depilyaciya/"
+              className="text-gold underline font-semibold text-sm hover:opacity-80 transition-opacity"
+            >
+              ← Все зоны депиляции
+            </Link>
+          </div>
+        </div>
+      </section>
+    </PageLayout>
+  );
+};
+
+export default Bikini;

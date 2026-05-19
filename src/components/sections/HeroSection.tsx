@@ -9,8 +9,11 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           <div className="space-y-8">
             <h1 className="text-4xl lg:text-6xl font-heading font-bold leading-tight text-gold">
-              "Я — Натали, мастер депиляции с 2021 года"
+              Мужская депиляция воском и автозагар в Екатеринбурге
             </h1>
+            <p className="text-lg text-foreground/70">
+              Екатеринбург, ул. Культуры 2, каб. 115.3 — только мужчины, с 2021 года
+            </p>
             <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-steel/30">
               <p className="text-xl text-foreground font-medium leading-relaxed">
                 Работаю исключительно с мужчинами. 
@@ -57,7 +60,10 @@ const HeroSection = () => {
           </div>
           <div className="text-center space-y-6">
             <p className="text-3xl sm:text-4xl font-heading font-bold leading-tight text-gold">
-              "Я — Натали, мастер депиляции с 2021 года"
+              Мужская депиляция воском и автозагар в Екатеринбурге
+            </p>
+            <p className="text-base text-foreground/70">
+              ул. Культуры 2, каб. 115.3 — только мужчины, с 2021 года
             </p>
             <div className="bg-black/60 backdrop-blur-sm rounded-lg p-6 border border-gold/30">
               <p className="text-lg text-foreground font-medium leading-relaxed">
