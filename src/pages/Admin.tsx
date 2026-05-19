@@ -12,6 +12,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 
 export default function Admin() {
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [authed, setAuthed] = useState(false);
   const [authError, setAuthError] = useState('');
   const [editSlug, setEditSlug] = useState<string | null>(null);
@@ -67,26 +68,44 @@ export default function Admin() {
   if (!authed) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center px-4">
-        <div className="bg-white rounded-2xl p-8 w-full max-w-sm shadow-2xl">
+        <div className="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-sm shadow-2xl">
           <div className="text-center mb-6">
+            <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mx-auto mb-3">
+              <Icon name="Lock" size={20} className="text-gold" />
+            </div>
             <h1 className="text-2xl font-heading font-bold text-black mb-1">Админ-панель</h1>
             <p className="text-steel text-sm">Управление ценами · sugarts.ru</p>
           </div>
           <div className="space-y-4">
             <div>
               <label className="text-sm font-medium text-black mb-1 block">Пароль</label>
-              <input
-                type="password"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && handleLogin()}
-                className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-gold"
-                placeholder="Введите пароль"
-                autoFocus
-              />
-              {authError && <p className="text-red-500 text-xs mt-1">{authError}</p>}
+              <div className="relative">
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && handleLogin()}
+                  className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-gold pr-11"
+                  placeholder="Введите пароль"
+                  autoFocus
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(v => !v)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-steel hover:text-black transition-colors"
+                  tabIndex={-1}
+                >
+                  <Icon name={showPassword ? 'EyeOff' : 'Eye'} size={16} />
+                </button>
+              </div>
+              {authError && (
+                <p className="text-red-500 text-xs mt-1 flex items-center gap-1">
+                  <Icon name="AlertCircle" size={12} />
+                  {authError}
+                </p>
+              )}
             </div>
-            <Button onClick={handleLogin} className="w-full bg-black text-gold hover:bg-black/85 font-semibold">
+            <Button onClick={handleLogin} className="w-full bg-black text-gold hover:bg-black/85 font-semibold h-11">
               Войти
             </Button>
           </div>
@@ -168,43 +187,49 @@ export default function Admin() {
                   </div>
                   <div className="divide-y divide-gray-100">
                     {items.map(item => (
-                      <div key={item.slug} className="flex items-center justify-between px-5 py-3 gap-4">
-                        <span className="text-black text-sm">{item.label}</span>
-                        <div className="flex items-center gap-2 shrink-0">
-                          {editSlug === item.slug ? (
-                            <>
+                      <div key={item.slug} className="px-4 sm:px-5 py-3">
+                        {editSlug === item.slug ? (
+                          /* Режим редактирования — на мобиле вертикально */
+                          <div className="flex flex-col gap-2">
+                            <span className="text-black text-sm font-medium">{item.label}</span>
+                            <div className="flex items-center gap-2">
                               <input
                                 type="text"
                                 value={editValue}
                                 onChange={e => setEditValue(e.target.value)}
                                 onKeyDown={e => e.key === 'Enter' && saveEdit()}
-                                className="border border-gold rounded px-2 py-1 text-sm w-28 focus:outline-none text-right"
+                                className="border border-gold rounded-lg px-3 py-2 text-sm flex-1 focus:outline-none text-right font-semibold"
                                 autoFocus
                               />
                               <button
                                 onClick={saveEdit}
                                 disabled={saving}
-                                className="text-xs bg-black text-gold px-3 py-1.5 rounded font-medium hover:bg-black/80 disabled:opacity-50"
+                                className="bg-black text-gold text-sm px-4 py-2 rounded-lg font-medium hover:bg-black/80 disabled:opacity-50 shrink-0"
                               >
                                 {saving ? '...' : 'Сохранить'}
                               </button>
                               <button
                                 onClick={() => setEditSlug(null)}
-                                className="text-steel text-xs hover:text-black"
+                                className="text-steel hover:text-black shrink-0"
+                                title="Отмена"
                               >
-                                Отмена
+                                <Icon name="X" size={16} />
                               </button>
-                            </>
-                          ) : (
+                            </div>
+                          </div>
+                        ) : (
+                          /* Обычный режим */
+                          <div className="flex items-center justify-between gap-3">
+                            <span className="text-black text-sm leading-snug">{item.label}</span>
                             <button
                               onClick={() => startEdit(item)}
-                              className="text-gold font-semibold text-sm hover:underline flex items-center gap-1"
+                              className="text-gold font-semibold text-sm hover:underline flex items-center gap-1 shrink-0"
                             >
                               {item.price}
                               <Icon name="Pencil" size={12} className="text-gold/60" />
                             </button>
-                          )}
-                        </div>
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
