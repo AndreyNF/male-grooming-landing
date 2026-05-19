@@ -91,11 +91,11 @@ export default function Admin() {
                 />
                 <button
                   type="button"
+                  onMouseDown={e => e.preventDefault()}
                   onClick={() => setShowPassword(v => !v)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-steel hover:text-black transition-colors"
-                  tabIndex={-1}
+                  className="absolute right-0 top-0 h-full w-11 flex items-center justify-center text-steel hover:text-black transition-colors"
                 >
-                  <Icon name={showPassword ? 'EyeOff' : 'Eye'} size={16} />
+                  <Icon name={showPassword ? 'EyeOff' : 'Eye'} size={18} />
                 </button>
               </div>
               {authError && (
@@ -192,28 +192,27 @@ export default function Admin() {
                           /* Режим редактирования — на мобиле вертикально */
                           <div className="flex flex-col gap-2">
                             <span className="text-black text-sm font-medium">{item.label}</span>
-                            <div className="flex items-center gap-2">
-                              <input
-                                type="text"
-                                value={editValue}
-                                onChange={e => setEditValue(e.target.value)}
-                                onKeyDown={e => e.key === 'Enter' && saveEdit()}
-                                className="border border-gold rounded-lg px-3 py-2 text-sm flex-1 focus:outline-none text-right font-semibold"
-                                autoFocus
-                              />
+                            <input
+                              type="text"
+                              value={editValue}
+                              onChange={e => setEditValue(e.target.value)}
+                              onKeyDown={e => e.key === 'Enter' && saveEdit()}
+                              className="border-2 border-gold rounded-lg px-3 py-2.5 text-sm w-full focus:outline-none text-right font-semibold"
+                              autoFocus
+                            />
+                            <div className="flex gap-2">
                               <button
                                 onClick={saveEdit}
                                 disabled={saving}
-                                className="bg-black text-gold text-sm px-4 py-2 rounded-lg font-medium hover:bg-black/80 disabled:opacity-50 shrink-0"
+                                className="flex-1 bg-black text-gold text-sm py-2.5 rounded-lg font-semibold hover:bg-black/80 disabled:opacity-50"
                               >
-                                {saving ? '...' : 'Сохранить'}
+                                {saving ? 'Сохраняю...' : 'Сохранить'}
                               </button>
                               <button
                                 onClick={() => setEditSlug(null)}
-                                className="text-steel hover:text-black shrink-0"
-                                title="Отмена"
+                                className="flex-1 border border-gray-300 text-steel text-sm py-2.5 rounded-lg font-medium hover:border-gray-400 hover:text-black"
                               >
-                                <Icon name="X" size={16} />
+                                Отмена
                               </button>
                             </div>
                           </div>
