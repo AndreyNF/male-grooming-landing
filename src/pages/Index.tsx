@@ -61,9 +61,9 @@ const Index = () => {
               </div>
             </div>
             <div className="text-center space-y-6">
-              <h1 className="text-3xl sm:text-4xl font-heading font-bold leading-tight text-gold">
+              <p className="text-3xl sm:text-4xl font-heading font-bold leading-tight text-gold">
                 "Я — Натали, мастер депиляции с 2021 года"
-              </h1>
+              </p>
               <div className="bg-black/60 backdrop-blur-sm rounded-lg p-6 border border-gold/30">
                 <p className="text-lg text-foreground font-medium leading-relaxed">
                   Работаю исключительно с мужчинами. 
@@ -423,29 +423,93 @@ const Index = () => {
           {/* FAQ Section */}
           <div className="max-w-2xl mx-auto mb-12 animate-fade-in">
             <h2 className="text-3xl font-heading font-bold text-white text-center mb-8">Частые вопросы</h2>
-            <Accordion type="single" collapsible className="space-y-3">
+            <Accordion type="multiple" className="space-y-3">
               <AccordionItem value="item-1" className="bg-card/10 border border-gold/20 rounded-lg px-6">
                 <AccordionTrigger className="text-white font-medium hover:text-gold">
-                  Вы оказываете интимные услуги?
+                  Болезненна ли восковая депиляция для мужчин?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-300">
-                  Нет. Я занимаюсь исключительно депиляцией и загаром. Услуги интимного характера не оказываю.
+                  Дискомфорт зависит от зоны и чувствительности кожи. Использую качественный воск и отработанную технику, чтобы процедура проходила максимально комфортно. Большинство клиентов переносят депиляцию спокойно, без сильной боли.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2" className="bg-card/10 border border-gold/20 rounded-lg px-6">
                 <AccordionTrigger className="text-white font-medium hover:text-gold">
-                  Больно ли делать депиляцию воском?
+                  Сколько времени занимает восковая депиляция?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-300">
-                  Я использую профессиональные техники и материалы, которые делают процедуру максимально комфортной. Большинство клиентов отмечают минимальный дискомфорт.
+                  От 15 до 60 минут в зависимости от зоны: окантовка бороды или уши — быстрее, ноги полностью или спина — дольше. Точное время скажу при записи.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3" className="bg-card/10 border border-gold/20 rounded-lg px-6">
                 <AccordionTrigger className="text-white font-medium hover:text-gold">
+                  Как проходит моментальный автозагар?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300">
+                  Подбираю оттенок под ваш тон кожи, равномерно наношу профессиональный автозагар. Первый результат виден через 2–3 часа, окончательный оттенок формируется в течение суток.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4" className="bg-card/10 border border-gold/20 rounded-lg px-6">
+                <AccordionTrigger className="text-white font-medium hover:text-gold">
+                  Как долго держится автозагар?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300">
+                  Обычно 7–10 дней при правильном уходе: не трите кожу мочалкой, увлажняйте, избегайте длительных горячих ванн в первые сутки.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-5" className="bg-card/10 border border-gold/20 rounded-lg px-6">
+                <AccordionTrigger className="text-white font-medium hover:text-gold">
+                  Как соблюдается гигиена во время процедур?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300">
+                  Работаю со стерильными одноразовыми расходниками, дезинфицирую кожу и инструменты, использую профессиональные материалы. Для каждого клиента — чистые принадлежности и подготовленное рабочее место.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-6" className="bg-card/10 border border-gold/20 rounded-lg px-6">
+                <AccordionTrigger className="text-white font-medium hover:text-gold">
+                  Как подготовиться к депиляции воском?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300">
+                  Волосы в зоне процедуры — около 5–7 мм (примерно две недели роста). За сутки не загорайте и не наносите крем на зону депиляции. При раздражении или воспалении на коже лучше перенести визит.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-7" className="bg-card/10 border border-gold/20 rounded-lg px-6">
+                <AccordionTrigger className="text-white font-medium hover:text-gold">
+                  Как долго держится результат депиляции воском?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300">
+                  В среднем 3–6 недель. Волосы отрастают мягче и реже, чем после бритья. Срок зависит от особенностей кожи и зоны.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-8" className="bg-card/10 border border-gold/20 rounded-lg px-6">
+                <AccordionTrigger className="text-white font-medium hover:text-gold">
+                  Комфортно ли мужчинам у женщины-мастера?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300">
+                  Да. Работаю только с мужчинами, всё проходит профессионально и уважительно, без лишних вопросов.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-9" className="bg-card/10 border border-gold/20 rounded-lg px-6">
+                <AccordionTrigger className="text-white font-medium hover:text-gold">
+                  Вы оказываете интимные услуги?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300">
+                  Нет. Я мастер депиляции и автозагара: восковая депиляция (включая бикини) и моментальный загар — только косметологические процедуры.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-10" className="bg-card/10 border border-gold/20 rounded-lg px-6">
+                <AccordionTrigger className="text-white font-medium hover:text-gold">
+                  Больно ли делать депиляцию воском?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300">
+                  Ощущения индивидуальны, но при правильной технике процедура переносится легче, чем многие ожидают. При необходимости делаю паузы.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-11" className="bg-card/10 border border-gold/20 rounded-lg px-6">
+                <AccordionTrigger className="text-white font-medium hover:text-gold">
                   Как записаться на процедуру?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-300">
-                  Напишите мне в Telegram — @sugar_TS. Отвечу быстро и подберём удобное время.
+                  Напишите в Telegram @sugar_TS: укажите услугу и удобное время. Подтвержу запись и отвечу на вопросы до визита.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
