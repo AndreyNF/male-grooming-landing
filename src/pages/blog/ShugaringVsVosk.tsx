@@ -139,7 +139,13 @@ const ShugaringVsVosk = () => {
               Написать @sugar_TS
             </Button>
           </a>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
+            <Link
+              to="/blog/"
+              className="text-gold underline font-semibold text-sm hover:opacity-80 transition-opacity"
+            >
+              Все статьи →
+            </Link>
             <Link
               to="/depilyaciya/"
               className="text-gold underline font-semibold text-sm hover:opacity-80 transition-opacity"

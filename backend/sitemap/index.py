@@ -3,7 +3,7 @@ def handler(event: dict, context) -> dict:
     if event.get('httpMethod') == 'OPTIONS':
         return {'statusCode': 200, 'headers': {'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type'}, 'body': ''}
 
-    today = '2026-05-19'
+    today = '2026-05-28'
     urls = [
         ('https://sugarts.ru/', '1.0', 'weekly'),
         ('https://sugarts.ru/zagar/', '0.9', 'weekly'),
@@ -14,6 +14,15 @@ def handler(event: dict, context) -> dict:
         ('https://sugarts.ru/depilyaciya/boroda/', '0.7', 'monthly'),
         ('https://sugarts.ru/depilyaciya/nogi-ruki/', '0.7', 'monthly'),
         ('https://sugarts.ru/kontakty/', '0.7', 'monthly'),
+        ('https://sugarts.ru/blog/', '0.7', 'weekly'),
+        ('https://sugarts.ru/blog/muzhskaya-depilyaciya-ekaterinburg/', '0.65', 'monthly'),
+        ('https://sugarts.ru/blog/pervaya-depilyaciya-voskom-muzhchiny/', '0.6', 'monthly'),
+        ('https://sugarts.ru/blog/vosk-ili-lazer-muzhchiny/', '0.6', 'monthly'),
+        ('https://sugarts.ru/blog/okantovka-borody-voskom-ekaterinburg/', '0.6', 'monthly'),
+        ('https://sugarts.ru/blog/muzhskaya-depilyaciya-bikini-ekaterinburg/', '0.6', 'monthly'),
+        ('https://sugarts.ru/blog/depilyaciya-spinu-grud-muzhchiny-ekb/', '0.6', 'monthly'),
+        ('https://sugarts.ru/blog/depilyaciya-nog-ruk-muzhchiny/', '0.6', 'monthly'),
+        ('https://sugarts.ru/blog/avtozagar-muzhchiny-ekaterinburg/', '0.6', 'monthly'),
         ('https://sugarts.ru/blog/shugaring-vs-vosk/', '0.6', 'monthly'),
     ]
 
