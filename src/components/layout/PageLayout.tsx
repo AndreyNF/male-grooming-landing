@@ -28,6 +28,7 @@ const FOOTER_LINKS = [
   { label: "Ноги и руки", to: "/depilyaciya/nogi-ruki/" },
   { label: "Автозагар", to: "/zagar/" },
   { label: "Контакты", to: "/kontakty/" },
+  { label: "Статьи и гайды", to: "/blog/" },
   { label: "Воск vs шугаринг", to: "/blog/shugaring-vs-vosk/" },
 ];
 

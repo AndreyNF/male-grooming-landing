@@ -111,6 +111,8 @@ const DepilyaciyaIndex = () => {
           </p>
           <div className="text-center mt-3">
             <Link to="/blog/shugaring-vs-vosk/" className="text-gold text-sm font-semibold hover:opacity-80 mt-3 inline-block">Читать подробное сравнение →</Link>
+            <span className="text-steel text-sm mx-2">·</span>
+            <Link to="/blog/" className="text-gold text-sm font-semibold hover:opacity-80 mt-3 inline-block">Все статьи →</Link>
           </div>
         </div>
       </section>
