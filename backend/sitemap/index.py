@@ -3,7 +3,7 @@ def handler(event: dict, context) -> dict:
     if event.get('httpMethod') == 'OPTIONS':
         return {'statusCode': 200, 'headers': {'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type'}, 'body': ''}
 
-    today = '2026-05-19'
+    today = '2026-05-28'
     urls = [
         ('https://sugarts.ru/', '1.0', 'weekly'),
         ('https://sugarts.ru/zagar/', '0.9', 'weekly'),
