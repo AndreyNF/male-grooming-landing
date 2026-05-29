@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
@@ -44,21 +43,29 @@ const PageLayout: React.FC<PageLayoutProps> = ({
     setMenuOpen(false);
   }, [pathname]);
 
-
+  useEffect(() => {
+    document.title = title;
+    const setMeta = (sel: string, attr: string, val: string) => {
+      let el = document.querySelector<HTMLMetaElement>(sel);
+      if (!el) { el = document.createElement('meta'); document.head.appendChild(el); }
+      el.setAttribute(attr, val);
+    };
+    const setLink = (rel: string, href: string) => {
+      let el = document.querySelector<HTMLLinkElement>(`link[rel="${rel}"]`);
+      if (!el) { el = document.createElement('link'); el.rel = rel; document.head.appendChild(el); }
+      el.href = href;
+    };
+    setMeta('meta[name="description"]', 'content', description);
+    setLink('canonical', canonical);
+    setMeta('meta[property="og:url"]', 'content', canonical);
+    setMeta('meta[property="og:title"]', 'content', title);
+    setMeta('meta[property="og:description"]', 'content', description);
+    setMeta('meta[name="twitter:url"]', 'content', canonical);
+    setMeta('meta[name="twitter:title"]', 'content', title);
+    setMeta('meta[name="twitter:description"]', 'content', description);
+  }, [title, description, canonical]);
 
   return (
-    <>
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <link rel="canonical" href={canonical} />
-      <meta property="og:url" content={canonical} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta name="twitter:url" content={canonical} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-    </Helmet>
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       {/* Navigation */}
       <header className="sticky top-0 z-40 bg-black border-b border-[hsl(var(--gold)/0.25)]">
@@ -222,7 +229,6 @@ const PageLayout: React.FC<PageLayoutProps> = ({
         </a>
       </div>
     </div>
-    </>
   );
 };
 
