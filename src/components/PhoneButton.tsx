@@ -29,7 +29,7 @@ const STYLES: Record<Place, string> = {
   contacts:
     'w-full sm:w-auto mt-3 bg-transparent border-[1.5px] border-gold text-gold hover:bg-gold hover:text-black font-semibold px-8 h-11 rounded-md text-sm',
   find: 'text-gold hover:text-gold/80 font-semibold rounded-sm underline-offset-4 hover:underline',
-  footer: 'text-gold hover:opacity-80 font-semibold mt-1 rounded-sm',
+  footer: 'text-gold hover:opacity-80 font-semibold mt-1 rounded-sm self-start',
 };
 
 const PhoneButton = ({ place }: PhoneButtonProps) => {

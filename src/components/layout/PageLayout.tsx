@@ -229,17 +229,18 @@ const PageLayout: React.FC<PageLayoutProps> = ({
           </div>
         </div>
 
-        <div className="border-t border-white/10 py-3 text-center text-xs text-white/30">
+        <div className="border-t border-white/10 py-3 text-center text-xs text-white/50">
           &copy; {new Date().getFullYear()} Натали. Все права защищены.
         </div>
       </footer>
 
       {/* Fixed mobile bottom bar */}
       <div
-        className={`fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-black border-t border-[hsl(var(--gold)/0.35)] px-4 py-3 flex items-center justify-center transition-[opacity,transform] duration-300 ${
-          showBar ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full pointer-events-none"
+        className={`fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-black border-t border-[hsl(var(--gold)/0.35)] px-4 py-3 flex items-center justify-center transition-[opacity,transform,visibility] duration-300 ${
+          showBar ? "opacity-100 translate-y-0 visible" : "opacity-0 translate-y-full pointer-events-none invisible delay-[0s,0s,300ms]"
         }`}
         aria-hidden={!showBar}
+        {...(!showBar ? { inert: "" as unknown as boolean } : {})}
       >
         <a
           href={TELEGRAM_URL}

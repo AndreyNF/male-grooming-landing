@@ -39,13 +39,13 @@ const Kontakty = () => {
                     <Icon name="MapPin" size={18} className="text-gold" />
                   </div>
                   <div>
-                    <p className="font-heading font-semibold text-black mb-1">Адрес</p>
-                    <p className="text-zinc-800 text-sm leading-relaxed">
+                    <p className="font-heading font-semibold text-white mb-1">Адрес</p>
+                    <p className="text-zinc-300 text-sm leading-relaxed">
                       г. Екатеринбург<br />
                       ул. Культуры, 2<br />
                       кабинет 115.3
                     </p>
-                    <p className="text-zinc-600 text-xs mt-2">
+                    <p className="text-zinc-400 text-xs mt-2">
                       Вход со стороны главного входа. Если не нашли — напишите, встречу.
                     </p>
                   </div>
@@ -61,9 +61,9 @@ const Kontakty = () => {
                     <Icon name="Clock" size={18} className="text-gold" />
                   </div>
                   <div>
-                    <p className="font-heading font-semibold text-black mb-1">Режим работы</p>
-                    <p className="text-zinc-800 text-sm">Ежедневно, 10:00–20:00</p>
-                    <p className="text-zinc-600 text-xs mt-2">
+                    <p className="font-heading font-semibold text-white mb-1">Режим работы</p>
+                    <p className="text-zinc-300 text-sm">Ежедневно, 10:00–20:00</p>
+                    <p className="text-zinc-400 text-xs mt-2">
                       Без выходных. Запись подтверждается сразу.
                     </p>
                   </div>
@@ -79,7 +79,7 @@ const Kontakty = () => {
                     <Icon name="Send" size={18} className="text-gold" />
                   </div>
                   <div>
-                    <p className="font-heading font-semibold text-black mb-1">Запись</p>
+                    <p className="font-heading font-semibold text-white mb-1">Запись</p>
                     <a
                       href={TELEGRAM_URL}
                       target="_blank"
@@ -88,7 +88,7 @@ const Kontakty = () => {
                     >
                       @sugar_TS в Telegram
                     </a>
-                    <p className="text-zinc-600 text-xs mt-2">
+                    <p className="text-zinc-400 text-xs mt-2">
                       Отвечаю ежедневно с 10:00 до 20:00.
                     </p>
                   </div>
@@ -104,8 +104,8 @@ const Kontakty = () => {
                     <Icon name="Car" size={18} className="text-gold" />
                   </div>
                   <div>
-                    <p className="font-heading font-semibold text-black mb-1">Парковка</p>
-                    <p className="text-zinc-800 text-sm">Бесплатная открытая парковка рядом со зданием</p>
+                    <p className="font-heading font-semibold text-white mb-1">Парковка</p>
+                    <p className="text-zinc-300 text-sm">Бесплатная открытая парковка рядом со зданием</p>
                   </div>
                 </div>
               </CardContent>
