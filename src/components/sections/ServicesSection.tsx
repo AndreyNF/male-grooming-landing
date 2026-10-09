@@ -97,7 +97,7 @@ const ServicesSection = () => {
               <button
                 key={cat.id}
                 onClick={() => setActivecat(cat.id)}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors border ${
+                className={`px-4 py-1.5 rounded-full text-sm font-semibold transition-colors border ${
                   activecat === cat.id
                     ? 'bg-black text-gold border-black'
                     : 'bg-white text-steel border-gray-200 hover:border-gold hover:text-black'

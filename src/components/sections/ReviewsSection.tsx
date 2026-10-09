@@ -67,7 +67,7 @@ const ReviewsSection = () => {
           </h2>
           <div className="flex items-center justify-center gap-2 mt-2">
             <Stars />
-            <span className="text-steel text-sm font-medium">5.0 · {REVIEWS.length} отзывов</span>
+            <span className="text-steel text-sm font-semibold">5.0 · {REVIEWS.length} отзывов</span>
           </div>
         </div>
 

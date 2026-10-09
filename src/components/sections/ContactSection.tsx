@@ -75,7 +75,7 @@ const ContactSection = () => {
           <h2 className="text-3xl font-heading font-bold text-white text-center mb-8">Ещё вопросы — отвечаю честно</h2>
           <Accordion type="multiple" className="space-y-3">
             <AccordionItem value="item-1" className="bg-card/10 border border-gold/20 rounded-lg px-6">
-              <AccordionTrigger className="text-white font-medium hover:text-gold">
+              <AccordionTrigger className="text-white font-semibold hover:text-gold">
                 Почему именно воск, а не шугаринг?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
@@ -83,7 +83,7 @@ const ContactSection = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2" className="bg-card/10 border border-gold/20 rounded-lg px-6">
-              <AccordionTrigger className="text-white font-medium hover:text-gold">
+              <AccordionTrigger className="text-white font-semibold hover:text-gold">
                 Можно ли делать депиляцию в интимной зоне?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
@@ -91,7 +91,7 @@ const ContactSection = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3" className="bg-card/10 border border-gold/20 rounded-lg px-6">
-              <AccordionTrigger className="text-white font-medium hover:text-gold">
+              <AccordionTrigger className="text-white font-semibold hover:text-gold">
                 Я первый раз — что меня ждёт?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
@@ -99,7 +99,7 @@ const ContactSection = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="bg-card/10 border border-gold/20 rounded-lg px-6">
-              <AccordionTrigger className="text-white font-medium hover:text-gold">
+              <AccordionTrigger className="text-white font-semibold hover:text-gold">
                 Как долго длится процедура?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
@@ -107,7 +107,7 @@ const ContactSection = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5" className="bg-card/10 border border-gold/20 rounded-lg px-6">
-              <AccordionTrigger className="text-white font-medium hover:text-gold">
+              <AccordionTrigger className="text-white font-semibold hover:text-gold">
                 Могу ли я прийти с другом / партнёром?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
@@ -115,7 +115,7 @@ const ContactSection = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-6" className="bg-card/10 border border-gold/20 rounded-lg px-6">
-              <AccordionTrigger className="text-white font-medium hover:text-gold">
+              <AccordionTrigger className="text-white font-semibold hover:text-gold">
                 Бывают ли акции или скидки?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
@@ -123,7 +123,7 @@ const ContactSection = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-7" className="bg-card/10 border border-gold/20 rounded-lg px-6">
-              <AccordionTrigger className="text-white font-medium hover:text-gold">
+              <AccordionTrigger className="text-white font-semibold hover:text-gold">
                 Что делать после процедуры?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
@@ -131,7 +131,7 @@ const ContactSection = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-8" className="bg-card/10 border border-gold/20 rounded-lg px-6">
-              <AccordionTrigger className="text-white font-medium hover:text-gold">
+              <AccordionTrigger className="text-white font-semibold hover:text-gold">
                 Можно ли совместить депиляцию и автозагар в один визит?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
@@ -139,7 +139,7 @@ const ContactSection = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-9" className="bg-card/10 border border-gold/20 rounded-lg px-6">
-              <AccordionTrigger className="text-white font-medium hover:text-gold">
+              <AccordionTrigger className="text-white font-semibold hover:text-gold">
                 У меня очень густые / жёсткие волосы. Поможет ли воск?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
@@ -147,7 +147,7 @@ const ContactSection = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-10" className="bg-card/10 border border-gold/20 rounded-lg px-6">
-              <AccordionTrigger className="text-white font-medium hover:text-gold">
+              <AccordionTrigger className="text-white font-semibold hover:text-gold">
                 Есть ли парковка рядом?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
@@ -155,7 +155,7 @@ const ContactSection = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-11" className="bg-card/10 border border-gold/20 rounded-lg px-6">
-              <AccordionTrigger className="text-white font-medium hover:text-gold">
+              <AccordionTrigger className="text-white font-semibold hover:text-gold">
                 Как вы соблюдаете стерильность?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">

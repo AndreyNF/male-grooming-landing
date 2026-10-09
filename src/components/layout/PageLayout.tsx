@@ -43,6 +43,22 @@ const PageLayout: React.FC<PageLayoutProps> = ({
     setMenuOpen(false);
   }, [pathname]);
 
+  const [showBar, setShowBar] = useState(false);
+
+  useEffect(() => {
+    const target = document.getElementById("hero-cta");
+    if (!target) {
+      setShowBar(true);
+      return;
+    }
+    setShowBar(false);
+    const io = new IntersectionObserver(([entry]) => {
+      setShowBar(!entry.isIntersecting);
+    });
+    io.observe(target);
+    return () => io.disconnect();
+  }, [pathname]);
+
   useEffect(() => {
     document.title = title;
     const setMeta = (sel: string, attr: string, val: string) => {
@@ -84,7 +100,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
               <Link
                 key={link.to}
                 to={link.to}
-                className={`px-3 py-1.5 text-sm font-medium rounded transition-colors ${
+                className={`px-3 py-1.5 text-sm font-semibold rounded transition-colors ${
                   pathname === link.to
                     ? "text-[hsl(var(--gold))]"
                     : "text-white/70 hover:text-white"
@@ -126,7 +142,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`py-2.5 px-3 text-sm font-medium rounded transition-colors ${
+                  className={`py-2.5 px-3 text-sm font-semibold rounded transition-colors ${
                     pathname === link.to
                       ? "text-[hsl(var(--gold))] bg-white/5"
                       : "text-white/70 hover:text-white hover:bg-white/5"
@@ -172,7 +188,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
               href={TELEGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[hsl(var(--gold))] hover:opacity-80 transition-opacity font-medium mt-1"
+              className="flex items-center gap-2 text-[hsl(var(--gold))] hover:opacity-80 transition-opacity font-semibold mt-1"
             >
               <Icon name="Send" className="w-4 h-4" />
               {TELEGRAM_HANDLE}
@@ -217,7 +233,12 @@ const PageLayout: React.FC<PageLayoutProps> = ({
       </footer>
 
       {/* Fixed mobile bottom bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-black border-t border-[hsl(var(--gold)/0.35)] px-4 py-3 flex items-center justify-center">
+      <div
+        className={`fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-black border-t border-[hsl(var(--gold)/0.35)] px-4 py-3 flex items-center justify-center transition-[opacity,transform] duration-300 ${
+          showBar ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full pointer-events-none"
+        }`}
+        aria-hidden={!showBar}
+      >
         <a
           href={TELEGRAM_URL}
           target="_blank"

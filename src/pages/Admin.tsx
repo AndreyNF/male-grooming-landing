@@ -78,7 +78,7 @@ export default function Admin() {
           </div>
           <div className="space-y-4">
             <div>
-              <label className="text-sm font-medium text-black mb-1 block">Пароль</label>
+              <label className="text-sm font-semibold text-black mb-1 block">Пароль</label>
               <div className="relative">
                 <input
                   type={showPassword ? 'text' : 'password'}
@@ -191,7 +191,7 @@ export default function Admin() {
                         {editSlug === item.slug ? (
                           /* Режим редактирования — на мобиле вертикально */
                           <div className="flex flex-col gap-2">
-                            <span className="text-black text-sm font-medium">{item.label}</span>
+                            <span className="text-black text-sm font-semibold">{item.label}</span>
                             <input
                               type="text"
                               value={editValue}
@@ -210,7 +210,7 @@ export default function Admin() {
                               </button>
                               <button
                                 onClick={() => setEditSlug(null)}
-                                className="flex-1 border border-gray-300 text-steel text-sm py-2.5 rounded-lg font-medium hover:border-gray-400 hover:text-black"
+                                className="flex-1 border border-gray-300 text-steel text-sm py-2.5 rounded-lg font-semibold hover:border-gray-400 hover:text-black"
                               >
                                 Отмена
                               </button>
@@ -239,7 +239,7 @@ export default function Admin() {
         )}
 
         {saveMsg && (
-          <div className="mt-4 text-center text-sm text-green-600 font-medium">{saveMsg}</div>
+          <div className="mt-4 text-center text-sm text-green-600 font-semibold">{saveMsg}</div>
         )}
       </div>
     </div>

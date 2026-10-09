@@ -58,7 +58,7 @@ const ShugaringVsVosk = () => {
             <div className="rounded-b-lg overflow-hidden border border-gray-200 divide-y divide-gray-200">
               {COMPARE_ROWS.map((row, idx) => (
                 <div key={row.criteria} className={`grid grid-cols-3 gap-px ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
-                  <div className="px-4 py-3 text-black font-medium text-sm">{row.criteria}</div>
+                  <div className="px-4 py-3 text-black font-semibold text-sm">{row.criteria}</div>
                   <div className="px-4 py-3 text-steel text-sm text-center flex items-center justify-center gap-1.5">
                     <Icon name="Check" size={14} className="text-gold shrink-0" />{row.wax}
                   </div>
