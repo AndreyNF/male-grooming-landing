@@ -59,10 +59,10 @@ const ShugaringVsVosk = () => {
               {COMPARE_ROWS.map((row, idx) => (
                 <div key={row.criteria} className={`grid grid-cols-3 gap-px ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
                   <div className="px-4 py-3 text-black font-semibold text-sm">{row.criteria}</div>
-                  <div className="px-4 py-3 text-steel text-sm text-center flex items-center justify-center gap-1.5">
+                  <div className="px-4 py-3 text-zinc-800 text-sm text-center flex items-center justify-center gap-1.5">
                     <Icon name="Check" size={14} className="text-gold shrink-0" />{row.wax}
                   </div>
-                  <div className="px-4 py-3 text-steel text-sm text-center">{row.sugar}</div>
+                  <div className="px-4 py-3 text-zinc-800 text-sm text-center">{row.sugar}</div>
                 </div>
               ))}
             </div>
@@ -80,12 +80,12 @@ const ShugaringVsVosk = () => {
                     <p className="text-xs text-gold font-semibold uppercase mb-1">Воск</p>
                     <div className="flex items-start gap-1.5">
                       <Icon name="Check" size={13} className="text-gold shrink-0 mt-0.5" />
-                      <p className="text-steel text-sm leading-snug">{row.wax}</p>
+                      <p className="text-zinc-800 text-sm leading-snug">{row.wax}</p>
                     </div>
                   </div>
                   <div className="px-3 py-3 bg-gray-50">
-                    <p className="text-xs text-steel/60 font-semibold uppercase mb-1">Шугаринг</p>
-                    <p className="text-steel text-sm leading-snug">{row.sugar}</p>
+                    <p className="text-xs text-zinc-600 font-semibold uppercase mb-1">Шугаринг</p>
+                    <p className="text-zinc-800 text-sm leading-snug">{row.sugar}</p>
                   </div>
                 </div>
               </div>
@@ -100,16 +100,16 @@ const ShugaringVsVosk = () => {
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-6 text-center">
             Почему я выбираю воск для мужчин
           </h2>
-          <p className="text-steel text-base leading-relaxed mb-4">
+          <p className="text-zinc-800 text-base leading-relaxed mb-4">
             Оба метода убирают волосы с корнем — в этом они похожи. Разница в том, как именно они это делают и для какого типа волос подходят лучше.
           </p>
-          <p className="text-steel text-base leading-relaxed mb-4">
+          <p className="text-zinc-800 text-base leading-relaxed mb-4">
             Шугаринг — паста на основе сахара — наносится против роста волос и снимается по росту. Это снижает раздражение, но на грубых, жёстких волосах паста нередко соскальзывает или рвёт волос, не вытягивая его из фолликула. Следствие — вросшие волосы и повторные проходы по одному месту.
           </p>
-          <p className="text-steel text-base leading-relaxed mb-4">
+          <p className="text-zinc-800 text-base leading-relaxed mb-4">
             Профессиональный воск прилипает к волосу плотнее. На мужской коже — особенно на спине, груди, бикини — это критично. Горячий воск размягчает кожу и позволяет вытянуть даже самые упрямые волоски за один раз.
           </p>
-          <p className="text-steel text-base leading-relaxed">
+          <p className="text-zinc-800 text-base leading-relaxed">
             Для женщин шугаринг часто оптимален. Для мужчин — воск, как правило, даёт более чистый и предсказуемый результат.
           </p>
         </div>

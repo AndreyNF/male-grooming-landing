@@ -66,7 +66,7 @@ const Zagar = () => {
                 <h3 className="font-heading font-semibold text-black text-lg mb-2">
                   Подбор оттенка
                 </h3>
-                <p className="text-steel text-sm leading-relaxed">
+                <p className="text-zinc-800 text-sm leading-relaxed">
                   Оцениваю ваш естественный тон кожи и обсуждаем желаемый результат — лёгкий загар или выраженный тёмный тон. Никакой самодеятельности: оттенок подбирается индивидуально.
                 </p>
               </CardContent>
@@ -80,7 +80,7 @@ const Zagar = () => {
                 <h3 className="font-heading font-semibold text-black text-lg mb-2">
                   Нанесение
                 </h3>
-                <p className="text-steel text-sm leading-relaxed">
+                <p className="text-zinc-800 text-sm leading-relaxed">
                   Состав наносится профессиональным пульверизатором равномерно по всему телу. Занимает 15–20 минут. Результат виден уже в процессе.
                 </p>
               </CardContent>
@@ -94,7 +94,7 @@ const Zagar = () => {
                 <h3 className="font-heading font-semibold text-black text-lg mb-2">
                   Результат
                 </h3>
-                <p className="text-steel text-sm leading-relaxed">
+                <p className="text-zinc-800 text-sm leading-relaxed">
                   Загар проявляется в течение 4–8 часов и держится до 7–10 дней. Со временем смывается равномерно — без пятен, если соблюдать уход.
                 </p>
               </CardContent>
@@ -117,7 +117,7 @@ const Zagar = () => {
                 <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
                   <Icon name="BadgePercent" size={28} className="text-gold" />
                 </div>
-                <p className="text-steel text-base leading-relaxed mb-6">
+                <p className="text-zinc-800 text-base leading-relaxed mb-6">
                   Цена зависит от зоны покрытия и обсуждается индивидуально при записи.
                   Свяжитесь в Telegram — отвечу быстро и согласую удобное время.
                 </p>
@@ -149,25 +149,25 @@ const Zagar = () => {
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <Icon name="Check" size={20} className="text-gold mt-0.5 shrink-0" />
-              <span className="text-steel leading-relaxed">
+              <span className="text-zinc-800 leading-relaxed">
                 Первые 8 часов — не мочить кожу, не потеть, избегать тесной одежды. Дайте составу зафиксироваться.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Icon name="Check" size={20} className="text-gold mt-0.5 shrink-0" />
-              <span className="text-steel leading-relaxed">
+              <span className="text-zinc-800 leading-relaxed">
                 Первый душ — тёплая вода без мочалки и агрессивных гелей. Лёгкими движениями, без растирания.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Icon name="Check" size={20} className="text-gold mt-0.5 shrink-0" />
-              <span className="text-steel leading-relaxed">
+              <span className="text-zinc-800 leading-relaxed">
                 Увлажнение — наносите лосьон для тела ежедневно. Это продлевает ровность загара и замедляет его смывание.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Icon name="Check" size={20} className="text-gold mt-0.5 shrink-0" />
-              <span className="text-steel leading-relaxed">
+              <span className="text-zinc-800 leading-relaxed">
                 Скраб — не раньше 5-го дня — когда захотите смыть загар равномерно, используйте мягкий скраб. Не раньше, иначе загар сойдёт пятнами.
               </span>
             </li>
@@ -186,7 +186,7 @@ const Zagar = () => {
               <AccordionTrigger className="text-left font-heading font-semibold text-black hover:no-underline hover:text-gold transition-colors">
                 Буду ли я выглядеть «оранжевым»?
               </AccordionTrigger>
-              <AccordionContent className="text-steel leading-relaxed">
+              <AccordionContent className="text-zinc-800 leading-relaxed">
                 Нет. Современные составы дают натуральный золотистый или бронзовый оттенок. Цвет подбирается под ваш тип кожи — результат выглядит как настоящий загар.
               </AccordionContent>
             </AccordionItem>
@@ -195,7 +195,7 @@ const Zagar = () => {
               <AccordionTrigger className="text-left font-heading font-semibold text-black hover:no-underline hover:text-gold transition-colors">
                 Как долго держится автозагар?
               </AccordionTrigger>
-              <AccordionContent className="text-steel leading-relaxed">
+              <AccordionContent className="text-zinc-800 leading-relaxed">
                 Обычно 7–10 дней при правильном уходе: не трите кожу мочалкой, увлажняйте,
                 избегайте длительных горячих ванн в первые сутки.
               </AccordionContent>
@@ -205,7 +205,7 @@ const Zagar = () => {
               <AccordionTrigger className="text-left font-heading font-semibold text-black hover:no-underline hover:text-gold transition-colors">
                 Как проходит моментальный автозагар?
               </AccordionTrigger>
-              <AccordionContent className="text-steel leading-relaxed">
+              <AccordionContent className="text-zinc-800 leading-relaxed">
                 Подбираю оттенок под ваш тон кожи, равномерно наношу профессиональный автозагар.
                 Первый результат виден через 2–3 часа, окончательный оттенок формируется в течение суток.
               </AccordionContent>
@@ -215,7 +215,7 @@ const Zagar = () => {
               <AccordionTrigger className="text-left font-heading font-semibold text-black hover:no-underline hover:text-gold transition-colors">
                 Как подготовиться к автозагару?
               </AccordionTrigger>
-              <AccordionContent className="text-steel leading-relaxed">
+              <AccordionContent className="text-zinc-800 leading-relaxed">
                 Кожа должна быть чистой, без кремов и дезодорантов. Желательно сделать скраб
                 за день до процедуры.
               </AccordionContent>
@@ -225,7 +225,7 @@ const Zagar = () => {
               <AccordionTrigger className="text-left font-heading font-semibold text-black hover:no-underline hover:text-gold transition-colors">
                 Подходит ли автозагар после депиляции?
               </AccordionTrigger>
-              <AccordionContent className="text-steel leading-relaxed">
+              <AccordionContent className="text-zinc-800 leading-relaxed">
                 Не сразу. После депиляции подождите 48 часов — кожа должна успокоиться. Тогда загар ляжет ровно и продержится дольше.
               </AccordionContent>
             </AccordionItem>
@@ -234,7 +234,7 @@ const Zagar = () => {
               <AccordionTrigger className="text-left font-heading font-semibold text-black hover:no-underline hover:text-gold transition-colors">
                 Как записаться на автозагар в Екатеринбурге?
               </AccordionTrigger>
-              <AccordionContent className="text-steel leading-relaxed">
+              <AccordionContent className="text-zinc-800 leading-relaxed">
                 Напишите в Telegram{' '}
                 <a
                   href={TELEGRAM_URL}

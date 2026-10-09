@@ -74,7 +74,7 @@ export default function Admin() {
               <Icon name="Lock" size={20} className="text-gold" />
             </div>
             <h1 className="text-2xl font-heading font-bold text-black mb-1">Админ-панель</h1>
-            <p className="text-steel text-sm">Управление ценами · sugarts.ru</p>
+            <p className="text-zinc-800 text-sm">Управление ценами · sugarts.ru</p>
           </div>
           <div className="space-y-4">
             <div>
@@ -93,7 +93,7 @@ export default function Admin() {
                   type="button"
                   onMouseDown={e => e.preventDefault()}
                   onClick={() => setShowPassword(v => !v)}
-                  className="absolute right-0 top-0 h-full w-11 flex items-center justify-center text-steel hover:text-black transition-colors"
+                  className="absolute right-0 top-0 h-full w-11 flex items-center justify-center text-zinc-800 hover:text-black transition-colors"
                 >
                   <Icon name={showPassword ? 'EyeOff' : 'Eye'} size={18} />
                 </button>
@@ -138,7 +138,7 @@ export default function Admin() {
             <Icon name="BookOpen" size={15} className="text-gold" />
             <span className="text-gold font-heading font-semibold text-sm uppercase tracking-wide">Как пользоваться</span>
           </div>
-          <div className="px-5 py-4 space-y-4 text-sm text-steel">
+          <div className="px-5 py-4 space-y-4 text-sm text-zinc-800">
             <div className="flex gap-3">
               <span className="w-6 h-6 rounded-full bg-black text-gold font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
               <p>Найди нужную зону в списке ниже. Зоны разбиты по категориям: <strong className="text-black">Лицо, Тело, Бикини, Ноги и руки</strong>.</p>
@@ -170,11 +170,11 @@ export default function Admin() {
 
         <div className="mb-6">
           <h2 className="text-xl font-heading font-bold text-black">Цены на услуги</h2>
-          <p className="text-steel text-sm mt-1">Нажмите на цену чтобы изменить.</p>
+          <p className="text-zinc-800 text-sm mt-1">Нажмите на цену чтобы изменить.</p>
         </div>
 
         {loading ? (
-          <div className="text-center py-12 text-steel">Загрузка...</div>
+          <div className="text-center py-12 text-zinc-800">Загрузка...</div>
         ) : (
           <div className="space-y-6">
             {Object.entries(CATEGORY_LABELS).map(([cat, catLabel]) => {
@@ -210,7 +210,7 @@ export default function Admin() {
                               </button>
                               <button
                                 onClick={() => setEditSlug(null)}
-                                className="flex-1 border border-gray-300 text-steel text-sm py-2.5 rounded-lg font-semibold hover:border-gray-400 hover:text-black"
+                                className="flex-1 border border-gray-300 text-zinc-800 text-sm py-2.5 rounded-lg font-semibold hover:border-gray-400 hover:text-black"
                               >
                                 Отмена
                               </button>

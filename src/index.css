@@ -22,7 +22,7 @@
     --muted: 0 0% 18%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 210 50% 45%; /* Стальной синий */
+    --accent: 32 95% 44%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -36,7 +36,7 @@
 
     --gold: 32 95% 44%; /* Матовая бронза */
     --gold-foreground: 0 0% 0%;
-    --steel: 210 50% 45%; /* Стальной синий */
+    --steel: 240 5% 16%;
     --steel-foreground: 0 0% 100%;
 
     --sidebar-background: 0 0% 10%;
@@ -68,7 +68,7 @@
     --muted: 0 0% 12%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 210 50% 45%; /* Стальной синий */
+    --accent: 32 95% 44%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;

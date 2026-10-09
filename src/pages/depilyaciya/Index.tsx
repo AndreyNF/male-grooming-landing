@@ -3,6 +3,7 @@ import PageLayout from '@/components/layout/PageLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { ZoneBikini, ZoneLegs } from '@/components/icons/ZoneIcons';
 
 const TELEGRAM_URL = 'https://t.me/sugar_TS';
 
@@ -18,14 +19,14 @@ const HUB_CARDS = [
     title: 'Зона бикини',
     desc: 'Классическое и глубокое бикини. Деликатно, профессионально.',
     price: 'от 2500 ₽',
-    icon: 'Flame',
+    icon: 'ZoneBikini',
     to: '/depilyaciya/bikini/',
   },
   {
     title: 'Ноги, руки, спина',
     desc: 'Крупные зоны — быстро и эффективно.',
     price: 'от 2000 ₽',
-    icon: 'Zap',
+    icon: 'ZoneLegs',
     to: '/depilyaciya/nogi-ruki/',
   },
   {
@@ -79,13 +80,19 @@ const DepilyaciyaIndex = () => {
                 <Card className="bg-white border-l-4 border-l-gold shadow-md hover:shadow-xl transition-shadow duration-300 h-full">
                   <CardContent className="p-6 flex items-center gap-4">
                     <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center shrink-0">
-                      <Icon name={card.icon} size={24} className="text-gold" />
+                      {card.icon === 'ZoneBikini' ? (
+                        <ZoneBikini size={24} className="text-gold" />
+                      ) : card.icon === 'ZoneLegs' ? (
+                        <ZoneLegs size={24} className="text-gold" />
+                      ) : (
+                        <Icon name={card.icon} size={24} className="text-gold" />
+                      )}
                     </div>
                     <div>
                       <p className="font-heading font-semibold text-black text-base leading-snug group-hover:text-gold transition-colors">
                         {card.title}
                       </p>
-                      <p className="text-steel text-sm mt-1">{card.desc}</p>
+                      <p className="text-zinc-800 text-sm mt-1">{card.desc}</p>
                     </div>
                     <Icon
                       name="ChevronRight"
@@ -106,7 +113,7 @@ const DepilyaciyaIndex = () => {
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-6 text-center">
             Воск — это выбор, а не компромисс
           </h2>
-          <p className="text-steel text-base leading-relaxed text-center">
+          <p className="text-zinc-800 text-base leading-relaxed text-center">
             Многие салоны предлагают мужчинам шугаринг — потому что это удобно для мастера. Но шугаринг создавался под более тонкие и мягкие волосы. На жёстком мужском покрове — особенно на спине, груди и в зоне бикини — воск работает точнее: захватывает волос с корнем, не рвёт его и меньше раздражает кожу при грамотном применении. Я работаю только воском — горячим и плёночным, в зависимости от зоны. Это даёт чистый результат даже там, где шугаринг пасует.
           </p>
           <div className="text-center mt-3">

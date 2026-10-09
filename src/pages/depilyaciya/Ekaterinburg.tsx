@@ -53,7 +53,7 @@ const Ekaterinburg = () => {
                 </div>
                 <div>
                   <p className="font-heading font-semibold text-black text-base">Адрес</p>
-                  <p className="text-steel text-sm mt-1 leading-relaxed">
+                  <p className="text-zinc-800 text-sm mt-1 leading-relaxed">
                     г. Екатеринбург, ул. Культуры, 2, кабинет 115.3
                   </p>
                 </div>
@@ -64,7 +64,7 @@ const Ekaterinburg = () => {
                 </div>
                 <div>
                   <p className="font-heading font-semibold text-black text-base">Режим работы</p>
-                  <p className="text-steel text-sm mt-1">Ежедневно 10:00–20:00</p>
+                  <p className="text-zinc-800 text-sm mt-1">Ежедневно 10:00–20:00</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -73,12 +73,12 @@ const Ekaterinburg = () => {
                 </div>
                 <div>
                   <p className="font-heading font-semibold text-black text-base">Парковка</p>
-                  <p className="text-steel text-sm mt-1">Бесплатная парковка рядом с салоном</p>
+                  <p className="text-zinc-800 text-sm mt-1">Бесплатная парковка рядом с салоном</p>
                 </div>
               </div>
             </CardContent>
           </Card>
-          <p className="text-steel text-sm sm:text-base leading-relaxed text-center">
+          <p className="text-zinc-800 text-sm sm:text-base leading-relaxed text-center">
             Вход в здание — со стороны главного входа. Кабинет 115.3 — на первом этаже. Если не нашли — напишите, встречу.
           </p>
         </div>
@@ -101,7 +101,7 @@ const Ekaterinburg = () => {
                     <p className="font-heading font-semibold text-black text-base leading-snug group-hover:text-gold transition-colors">
                       Восковая депиляция
                     </p>
-                    <p className="text-steel text-sm mt-1">Все зоны: борода, подмышки, грудь, спина, бикини, ноги, руки. Результат — 3–5 недель гладкости.</p>
+                    <p className="text-zinc-800 text-sm mt-1">Все зоны: борода, подмышки, грудь, спина, бикини, ноги, руки. Результат — 3–5 недель гладкости.</p>
                   </div>
                   <Icon name="ChevronRight" size={18} className="text-gold shrink-0" />
                 </CardContent>
@@ -117,14 +117,14 @@ const Ekaterinburg = () => {
                     <p className="font-heading font-semibold text-black text-base leading-snug group-hover:text-gold transition-colors">
                       Моментальный автозагар
                     </p>
-                    <p className="text-steel text-sm mt-1">Натуральный загар без солнца за один визит. Подбираю оттенок индивидуально.</p>
+                    <p className="text-zinc-800 text-sm mt-1">Натуральный загар без солнца за один визит. Подбираю оттенок индивидуально.</p>
                   </div>
                   <Icon name="ChevronRight" size={18} className="text-gold shrink-0" />
                 </CardContent>
               </Card>
             </Link>
           </div>
-          <p className="text-steel text-sm sm:text-base leading-relaxed text-center">
+          <p className="text-zinc-800 text-sm sm:text-base leading-relaxed text-center">
             Работаю только с мужчинами. В Екатеринбурге делаю мужскую депиляцию воском
             с 2021 года — стерильно, комфортно, без боли.
           </p>

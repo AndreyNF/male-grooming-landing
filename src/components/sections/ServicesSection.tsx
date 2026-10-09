@@ -38,7 +38,7 @@ const ServicesSection = () => {
                 <h3 className="text-2xl font-heading font-semibold mb-4 text-black">
                   Депиляция воском
                 </h3>
-                <p className="text-steel mb-6 leading-relaxed">
+                <p className="text-zinc-800 mb-6 leading-relaxed">
                   Удаление волос в любых зонах — от бороды до бикини. Результат держится до 4–6 недель. Только профессиональный воск, только одноразовые материалы.
                 </p>
                 <Link to="/depilyaciya/" className="text-gold text-sm font-semibold hover:opacity-80">Смотреть зоны и цены →</Link>
@@ -53,7 +53,7 @@ const ServicesSection = () => {
                 <h3 className="text-2xl font-heading font-semibold mb-4 text-black">
                   Моментальный автозагар
                 </h3>
-                <p className="text-steel mb-6 leading-relaxed">
+                <p className="text-zinc-800 mb-6 leading-relaxed">
                   Ровный загар без солнца и солярия — за один визит. Подбираю оттенок под ваш тон кожи. Результат виден сразу, держится до 10 дней.
                 </p>
                 <Link to="/zagar/" className="text-gold text-sm font-semibold hover:opacity-80">Подробнее об автозагаре →</Link>
@@ -65,16 +65,16 @@ const ServicesSection = () => {
             <h2 className="text-xl font-heading font-bold text-black mb-3">
               Почему воск — и никак иначе
             </h2>
-            <p className="text-steel leading-relaxed">
+            <p className="text-zinc-800 leading-relaxed">
               Я работаю исключительно воском — и это осознанный выбор, а не ограничение.
             </p>
-            <p className="text-steel leading-relaxed mt-3">
+            <p className="text-zinc-800 leading-relaxed mt-3">
               Воск удаляет волос с корнем и захватывает даже короткие волоски от 3 мм. Он отлично работает на грубых мужских волосах — там, где шугаринг часто скользит или рвёт волос, а не вытягивает.
             </p>
-            <p className="text-steel leading-relaxed mt-3">
+            <p className="text-zinc-800 leading-relaxed mt-3">
               Шугаринг — хороший метод, но он создан под более тонкие и мягкие волосы. На спине, груди или в зоне бикини у мужчин он нередко даёт вросшие волосы и требует повторных проходов.
             </p>
-            <p className="text-steel leading-relaxed mt-3">
+            <p className="text-zinc-800 leading-relaxed mt-3">
               Лазер — это навсегда, дорого и требует курса из 6–8 сеансов. Если вы ещё не готовы к постоянному удалению — воск даёт отличный результат здесь и сейчас.
             </p>
             <Link to="/blog/shugaring-vs-vosk/" className="text-gold text-sm font-semibold hover:opacity-80 mt-3 inline-block">Подробнее о разнице между воском и шугарингом →</Link>
@@ -100,7 +100,7 @@ const ServicesSection = () => {
                 className={`px-4 py-1.5 rounded-full text-sm font-semibold transition-colors border ${
                   activecat === cat.id
                     ? 'bg-black text-gold border-black'
-                    : 'bg-white text-steel border-gray-200 hover:border-gold hover:text-black'
+                    : 'bg-white text-zinc-800 border-gray-200 hover:border-gold hover:text-black'
                 }`}
               >
                 {cat.label}
@@ -111,9 +111,9 @@ const ServicesSection = () => {
           <div className="max-w-xl mx-auto">
             <Card className="bg-white shadow-xl border-l-4 border-l-gold">
               <CardContent className="p-5 sm:p-8">
-                <div className="space-y-3 text-steel">
+                <div className="space-y-3 text-zinc-800">
                   {loading ? (
-                    <p className="text-steel/50 text-sm text-center py-4">Загрузка...</p>
+                    <p className="text-zinc-600 text-sm text-center py-4">Загрузка...</p>
                   ) : filtered.map(item => (
                     <div key={item.label} className="flex justify-between items-center border-b border-gray-200 pb-2">
                       <span>{item.label}</span>
@@ -127,7 +127,7 @@ const ServicesSection = () => {
                     <h2 className="text-lg font-heading font-semibold text-black mb-1">
                       Моментальный загар в Екатеринбурге
                     </h2>
-                    <p className="text-steel text-sm">Цена зависит от зоны покрытия. Обсуждаем индивидуально при записи.</p>
+                    <p className="text-zinc-800 text-sm">Цена зависит от зоны покрытия. Обсуждаем индивидуально при записи.</p>
                   </div>
                   <div className="text-center mt-4">
                     <Link to="/zagar/" className="text-gold underline font-semibold text-sm">

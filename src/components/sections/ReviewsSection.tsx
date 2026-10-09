@@ -67,7 +67,7 @@ const ReviewsSection = () => {
           </h2>
           <div className="flex items-center justify-center gap-2 mt-2">
             <Stars />
-            <span className="text-steel text-sm font-semibold">5.0 · {REVIEWS.length} отзывов</span>
+            <span className="text-zinc-800 text-sm font-semibold">5.0 · {REVIEWS.length} отзывов</span>
           </div>
         </div>
 
@@ -84,18 +84,18 @@ const ReviewsSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-black text-sm leading-tight">{r.name}</p>
-                  <p className="text-steel/60 text-xs">{r.date}</p>
+                  <p className="text-zinc-600 text-xs">{r.date}</p>
                 </div>
               </div>
 
               {/* Stars + service */}
               <div>
                 <Stars />
-                <p className="text-steel/50 text-xs mt-0.5">{r.service}</p>
+                <p className="text-zinc-600 text-xs mt-0.5">{r.service}</p>
               </div>
 
               {/* Text */}
-              <p className="text-steel text-sm leading-relaxed">{r.text}</p>
+              <p className="text-zinc-800 text-sm leading-relaxed">{r.text}</p>
             </div>
           ))}
         </div>

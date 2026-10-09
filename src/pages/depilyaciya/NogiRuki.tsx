@@ -3,6 +3,7 @@ import PageLayout from '@/components/layout/PageLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { ZoneLegs, ZoneArms } from '@/components/icons/ZoneIcons';
 
 const TELEGRAM_URL = 'https://t.me/sugar_TS';
 
@@ -54,13 +55,17 @@ const NogiRuki = () => {
           <div className="max-w-md mx-auto">
             <Card className="bg-white shadow-xl border-l-4 border-l-gold">
               <CardContent className="p-4 sm:p-8">
-                <div className="space-y-3 text-steel">
+                <div className="space-y-3 text-zinc-800">
                   {PRICE_ROWS.map((row) => (
                     <div
                       key={row.label}
                       className="flex justify-between items-center border-b border-gray-200 pb-2"
                     >
-                      <span>{row.label}</span>
+                      <span className="flex items-center gap-2">
+                        {/^Руки/.test(row.label) && <ZoneArms size={20} className="text-gold shrink-0" />}
+                        {/^(Ноги|Голень)/.test(row.label) && <ZoneLegs size={20} className="text-gold shrink-0" />}
+                        {row.label}
+                      </span>
                       <span className="font-semibold text-gold">{row.price}</span>
                     </div>
                   ))}

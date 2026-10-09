@@ -50,7 +50,7 @@ const Bikini = () => {
           <div className="max-w-md mx-auto">
             <Card className="bg-white shadow-xl border-l-4 border-l-gold">
               <CardContent className="p-4 sm:p-8">
-                <div className="space-y-3 text-steel">
+                <div className="space-y-3 text-zinc-800">
                   {PRICE_ROWS.map((row) => (
                     <div
                       key={row.label}
@@ -73,7 +73,7 @@ const Bikini = () => {
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-6 text-center">
             Что вас ждёт на процедуре
           </h2>
-          <div className="space-y-4 text-steel text-base leading-relaxed">
+          <div className="space-y-4 text-zinc-800 text-base leading-relaxed">
             <p>
               Перед началом кратко обсуждаем зону и желаемый результат. Работаю профессиональным плёночным воском — он особенно деликатен на чувствительных участках. Процедура занимает от 40 до 60 минут в зависимости от объёма работы.
             </p>
@@ -87,7 +87,7 @@ const Bikini = () => {
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <Icon name="Check" size={18} className="text-gold mt-0.5 shrink-0" />
-                <span className="text-steel">{item}</span>
+                <span className="text-zinc-800">{item}</span>
               </div>
             ))}
           </div>

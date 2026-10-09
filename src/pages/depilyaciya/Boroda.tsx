@@ -40,7 +40,7 @@ const Boroda = () => {
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-8 text-center">
             Как это работает
           </h2>
-          <div className="space-y-5 text-steel text-base leading-relaxed">
+          <div className="space-y-5 text-zinc-800 text-base leading-relaxed">
             <p>
               Воск наносится по контуру бороды — на шею, щёки или межбровье — и убирает лишние волоски с корнем. Линия получается чёткой и ровной, без «щетинистого» отрастания через день-два.
             </p>
@@ -57,7 +57,7 @@ const Boroda = () => {
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <Icon name="Check" size={18} className="text-gold mt-0.5 shrink-0" />
-                <span className="text-steel">{item}</span>
+                <span className="text-zinc-800">{item}</span>
               </div>
             ))}
           </div>
@@ -69,7 +69,7 @@ const Boroda = () => {
                   <p className="font-heading font-semibold text-black text-lg">
                     Окантовка бороды воском
                   </p>
-                  <p className="text-steel text-sm mt-1">Екатеринбург, ул. Культуры 2, каб. 115.3</p>
+                  <p className="text-zinc-800 text-sm mt-1">Екатеринбург, ул. Культуры 2, каб. 115.3</p>
                 </div>
                 <span className="text-2xl sm:text-3xl font-heading font-bold text-gold shrink-0">
                   1000 ₽

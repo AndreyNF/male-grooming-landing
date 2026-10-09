@@ -54,16 +54,16 @@ const Voskom = () => {
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-black mb-6 text-center">
             Восковая депиляция — не шугаринг и не лазер
           </h2>
-          <p className="text-steel text-base leading-relaxed mb-4">
+          <p className="text-zinc-800 text-base leading-relaxed mb-4">
             Воск и шугаринг часто считают взаимозаменяемыми — но это не так, особенно для мужской кожи.
           </p>
-          <p className="text-steel text-base leading-relaxed mb-4">
+          <p className="text-zinc-800 text-base leading-relaxed mb-4">
             Мужские волосы жёстче и толще женских. Шугаринг в таких условиях нередко скользит, не захватывает волос полностью или рвёт его у основания — отсюда вросшие волосы и раздражение. Горячий воск проникает глубже в фолликул и вытягивает волос целиком.
           </p>
-          <p className="text-steel text-base leading-relaxed mb-4">
+          <p className="text-zinc-800 text-base leading-relaxed mb-4">
             На крупных зонах — спина, грудь, ноги — воск работает быстрее и аккуратнее. На деликатных зонах, вроде бикини, плёночный воск минимизирует дискомфорт.
           </p>
-          <p className="text-steel text-base leading-relaxed">
+          <p className="text-zinc-800 text-base leading-relaxed">
             Я не использую шугаринг — не потому что он плохой, а потому что воск лучше подходит для задач, с которыми приходят мои клиенты.
           </p>
         </div>
@@ -80,7 +80,7 @@ const Voskom = () => {
           <div className="max-w-xl mx-auto">
             <Card className="bg-white shadow-xl border-l-4 border-l-gold">
               <CardContent className="p-4 sm:p-8">
-                <div className="space-y-3 text-steel">
+                <div className="space-y-3 text-zinc-800">
                   {PRICE_ROWS.map((row) => (
                     <div
                       key={row.label}
