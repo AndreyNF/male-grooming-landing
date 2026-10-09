@@ -2,6 +2,7 @@ import PageLayout from '@/components/layout/PageLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import PhoneButton from '@/components/PhoneButton';
 import { Link } from 'react-router-dom';
 
 const TELEGRAM_URL = 'https://t.me/sugar_TS';
@@ -128,6 +129,7 @@ const Kontakty = () => {
               Написать @sugar_TS
             </Button>
           </a>
+          <div><PhoneButton place="contacts" /></div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6 text-sm">
             <Link to="/depilyaciya/" className="text-gold underline hover:opacity-80">
               Депиляция воском →

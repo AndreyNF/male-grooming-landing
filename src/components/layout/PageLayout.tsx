@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import PhoneButton from "@/components/PhoneButton";
 
 interface PageLayoutProps {
   title: string;
@@ -193,6 +194,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
               <Icon name="Send" className="w-4 h-4" />
               {TELEGRAM_HANDLE}
             </a>
+            <PhoneButton place="footer" />
           </div>
 
           {/* Links */}

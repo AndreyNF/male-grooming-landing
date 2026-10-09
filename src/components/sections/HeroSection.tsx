@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import PhoneButton from '@/components/PhoneButton';
 
 const SIZES = '(min-width: 1024px) 512px, (min-width: 416px) 384px, calc(100vw - 32px)';
 const SRCSET = {
@@ -46,6 +47,7 @@ const HeroSection = () => {
               <a id="hero-cta-desktop" href="https://t.me/sugar_TS" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-gold text-black hover:bg-gold/85 font-bold px-6 py-[14px] h-auto rounded-lg text-lg animate-scale-in shadow-lg">Записаться в Telegram</Button>
               </a>
+              <PhoneButton place="hero" />
               <Button variant="outline" size="lg" className="bg-transparent border-[1.5px] border-gold text-gold hover:bg-gold hover:text-black font-semibold px-6 py-[14px] h-auto rounded-lg text-lg">
                 <Icon name="MapPin" size={20} className="mr-2" />
                 Екатеринбург
@@ -103,6 +105,7 @@ const HeroSection = () => {
               <a id="hero-cta" href="https://t.me/sugar_TS" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
                 <Button size="lg" className="w-full bg-gold text-black hover:bg-gold/85 font-bold px-6 py-[14px] h-auto rounded-lg text-lg animate-scale-in shadow-lg">Записаться в Telegram</Button>
               </a>
+              <PhoneButton place="hero" />
               <Button variant="outline" size="lg" className="bg-transparent border-[1.5px] border-gold text-gold hover:bg-gold hover:text-black font-semibold px-6 py-[14px] h-auto rounded-lg text-lg">
                 <Icon name="MapPin" size={20} className="mr-2" />
                 Екатеринбург

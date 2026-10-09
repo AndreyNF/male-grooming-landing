@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import PhoneButton from '@/components/PhoneButton';
 import Icon from '@/components/ui/icon';
 
 const ContactSection = () => {
@@ -26,6 +27,15 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-white">Telegram @sugar_TS</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-4">
+                    <Icon name="Phone" size={20} className="text-black" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white">Телефон</p>
+                    <PhoneButton place="find" />
                   </div>
                 </div>
                 <div className="flex items-center">
