@@ -7,15 +7,15 @@ import Icon from '@/components/ui/icon';
 const TELEGRAM_URL = 'https://t.me/sugar_TS';
 
 const PRICE_ROWS = [
-  { label: 'Бикини классика', price: '2500 ₽' },
-  { label: 'Бикини глубокое', price: '3000 ₽' },
+  { label: 'Бикини «Классика»', price: '3000 ₽' },
+  { label: 'Бикини «Глубокое»', price: '4000 ₽' },
 ];
 
 const Bikini = () => {
   return (
     <PageLayout
       title="Мужская депиляция бикини в Екатеринбурге — цены | Натали"
-      description="Мужская депиляция бикини воском. Классика 2500 ₽, глубокое 3000 ₽. Только мужчины, стерильно. ул. Культуры 2. Запись @sugar_TS."
+      description="Мужская депиляция бикини воском. Классика 3000 ₽, глубокое 4000 ₽. Только мужчины, стерильно. ул. Культуры 2. Запись @sugar_TS."
       canonical="https://sugarts.ru/depilyaciya/bikini/"
     >
       {/* Hero */}

@@ -8,11 +8,11 @@ import { ZoneLegs, ZoneArms } from '@/components/icons/ZoneIcons';
 const TELEGRAM_URL = 'https://t.me/sugar_TS';
 
 const PRICE_ROWS = [
-  { label: 'Голень', price: '1 000 ₽' },
-  { label: 'Ноги полностью', price: '2 000 ₽' },
-  { label: 'Руки (предплечья)', price: '800 ₽' },
-  { label: 'Руки полностью', price: '1 200 ₽' },
-  { label: 'Спина', price: '1 500 ₽' },
+  { label: 'Голени', price: '2 500 ₽' },
+  { label: 'Ноги полностью', price: '5 000 ₽' },
+  { label: 'Руки до локтя', price: '2 500 ₽' },
+  { label: 'Руки полностью', price: '3 000 ₽' },
+  { label: 'Спина / торс', price: '3 500 ₽' },
   { label: 'Грудь', price: '1 200 ₽' },
 ];
 
@@ -20,7 +20,7 @@ const NogiRuki = () => {
   return (
     <PageLayout
       title="Депиляция ног и рук для мужчин — прайс | Екатеринбург"
-      description="Мужская депиляция ног, рук и спины воском. Ноги 4000 ₽, голени 2000 ₽, руки от 2000 ₽, спина 3000 ₽. Запись @sugar_TS."
+      description="Мужская депиляция ног, рук и спины воском. Ноги полностью 5000 ₽, голени 2500 ₽, руки от 2500 ₽, спина / торс 3500 ₽. Запись @sugar_TS."
       canonical="https://sugarts.ru/depilyaciya/nogi-ruki/"
     >
       {/* Hero */}
@@ -63,7 +63,7 @@ const NogiRuki = () => {
                     >
                       <span className="flex items-center gap-2">
                         {/^Руки/.test(row.label) && <ZoneArms size={20} className="text-gold shrink-0" />}
-                        {/^(Ноги|Голень)/.test(row.label) && <ZoneLegs size={20} className="text-gold shrink-0" />}
+                        {/^(Ноги|Голен)/.test(row.label) && <ZoneLegs size={20} className="text-gold shrink-0" />}
                         {row.label}
                       </span>
                       <span className="font-semibold text-gold">{row.price}</span>

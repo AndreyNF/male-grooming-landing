@@ -7,17 +7,20 @@ import Icon from '@/components/ui/icon';
 const TELEGRAM_URL = 'https://t.me/sugar_TS';
 
 const PRICE_ROWS = [
-  { label: 'Борода / окантовка', price: '1 000 ₽' },
-  { label: 'Подмышки', price: '700 ₽' },
+  { label: 'Окантовка бороды', price: '1 000 ₽' },
+  { label: 'Уши / нос', price: '1 000 ₽' },
+  { label: 'Подмышки', price: '1 000 ₽' },
   { label: 'Грудь', price: '1 200 ₽' },
   { label: 'Живот', price: '800 ₽' },
-  { label: 'Спина', price: '1 500 ₽' },
+  { label: 'Спина / торс', price: '3 500 ₽' },
   { label: 'Ягодицы', price: '1 000 ₽' },
-  { label: 'Классическое бикини', price: '2 500 ₽' },
-  { label: 'Глубокое бикини', price: '3 000 ₽' },
-  { label: 'Руки (полностью)', price: '1 200 ₽' },
-  { label: 'Ноги (полностью)', price: '2 000 ₽' },
-  { label: 'Голень', price: '1 000 ₽' },
+  { label: 'Бикини «Классика»', price: '3 000 ₽' },
+  { label: 'Бикини «Глубокое»', price: '4 000 ₽' },
+  { label: 'Комбо «Глубокое бикини + подмышки» · Популярное комбо', price: '5 000 ₽' },
+  { label: 'Руки до локтя', price: '2 500 ₽' },
+  { label: 'Руки полностью', price: '3 000 ₽' },
+  { label: 'Голени', price: '2 500 ₽' },
+  { label: 'Ноги полностью', price: '5 000 ₽' },
 ];
 
 const Voskom = () => {

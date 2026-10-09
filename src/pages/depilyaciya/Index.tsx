@@ -18,14 +18,14 @@ const HUB_CARDS = [
   {
     title: 'Зона бикини',
     desc: 'Классическое и глубокое бикини. Деликатно, профессионально.',
-    price: 'от 2500 ₽',
+    price: 'от 3000 ₽',
     icon: 'ZoneBikini',
     to: '/depilyaciya/bikini/',
   },
   {
     title: 'Ноги, руки, спина',
     desc: 'Крупные зоны — быстро и эффективно.',
-    price: 'от 2000 ₽',
+    price: 'от 2500 ₽',
     icon: 'ZoneLegs',
     to: '/depilyaciya/nogi-ruki/',
   },
