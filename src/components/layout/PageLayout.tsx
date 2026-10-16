@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import PhoneButton from "@/components/PhoneButton";
+import { telegramUrl, trackTelegramClick } from '@/lib/telegram';
 
 interface PageLayoutProps {
   title: string;
@@ -11,7 +12,7 @@ interface PageLayoutProps {
   children: React.ReactNode;
 }
 
-const TELEGRAM_URL = "https://t.me/sugar_TS";
+const TELEGRAM_URL = telegramUrl('header_footer');
 const TELEGRAM_HANDLE = "@sugar_TS";
 
 const NAV_LINKS = [
@@ -118,7 +119,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
               asChild
               className="hidden sm:inline-flex bg-[hsl(var(--gold))] text-black font-semibold hover:bg-[hsl(var(--gold)/0.85)] transition-colors h-9 px-5 text-sm rounded-md"
             >
-              <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
+              <a href={TELEGRAM_URL} onClick={trackTelegramClick} target="_blank" rel="noopener noreferrer">
                 <Icon name="Send" className="w-4 h-4 mr-1.5" />
                 Записаться
               </a>
@@ -153,7 +154,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
                 </Link>
               ))}
               <a
-                href={TELEGRAM_URL}
+                href={TELEGRAM_URL} onClick={trackTelegramClick}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 flex items-center justify-center gap-2 bg-[hsl(var(--gold))] text-black font-semibold text-sm rounded-md h-10"
@@ -186,7 +187,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
               <span>10:00–20:00 ежедневно</span>
             </div>
             <a
-              href={TELEGRAM_URL}
+              href={TELEGRAM_URL} onClick={trackTelegramClick}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-[hsl(var(--gold))] hover:opacity-80 transition-opacity font-semibold mt-1"
@@ -218,7 +219,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
               Записаться можно через Telegram — отвечаю ежедневно с 10:00 до 20:00.
             </p>
             <a
-              href={TELEGRAM_URL}
+              href={TELEGRAM_URL} onClick={trackTelegramClick}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[hsl(var(--gold))] text-black font-semibold text-sm rounded-md h-10 px-4 hover:bg-[hsl(var(--gold)/0.85)] transition-colors w-fit"
@@ -243,7 +244,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
         {...(!showBar ? { inert: "" as unknown as boolean } : {})}
       >
         <a
-          href={TELEGRAM_URL}
+          href={TELEGRAM_URL} onClick={trackTelegramClick}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full max-w-sm flex items-center justify-center gap-2 bg-[hsl(var(--gold))] text-black font-heading font-bold text-sm uppercase tracking-widest rounded-md h-11 hover:bg-[hsl(var(--gold)/0.85)] transition-colors"

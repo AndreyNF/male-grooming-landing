@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 import PageLayout from '@/components/layout/PageLayout';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import { telegramUrl, trackTelegramClick } from '@/lib/telegram';
 
-const TELEGRAM_URL = 'https://t.me/sugar_TS';
+const TELEGRAM_URL = telegramUrl('blog_shugaring-vs-vosk');
 
 const COMPARE_ROWS = [
   { criteria: 'Жёсткие/густые волосы', wax: 'Отлично', sugar: 'Хуже справляется' },
@@ -29,7 +30,7 @@ const ShugaringVsVosk = () => {
           <p className="text-white/60 text-sm sm:text-base mb-8">
             Честное сравнение двух методов — без маркетинга, только по делу.
           </p>
-          <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
+          <a href={TELEGRAM_URL} onClick={trackTelegramClick} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="bg-gold text-black hover:bg-gold/85 font-semibold px-8 py-3 text-lg"
@@ -126,7 +127,7 @@ const ShugaringVsVosk = () => {
           </p>
           <p className="text-white/60 text-sm mb-6">Хотите попробовать — запишитесь на первую процедуру.</p>
           <a
-            href={TELEGRAM_URL}
+            href={TELEGRAM_URL} onClick={trackTelegramClick}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mb-6"

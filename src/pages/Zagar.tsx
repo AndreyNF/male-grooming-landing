@@ -9,8 +9,9 @@ import {
   AccordionContent,
 } from '@/components/ui/accordion';
 import Icon from '@/components/ui/icon';
+import { telegramUrl, trackTelegramClick } from '@/lib/telegram';
 
-const TELEGRAM_URL = 'https://t.me/sugar_TS';
+const TELEGRAM_URL = telegramUrl('zagar');
 
 const Zagar = () => {
   return (
@@ -29,7 +30,7 @@ const Zagar = () => {
             Ровный натуральный загар без солнца и солярия — за один визит. Подбираю оттенок под ваш тон кожи.
           </p>
           <a
-            href={TELEGRAM_URL}
+            href={TELEGRAM_URL} onClick={trackTelegramClick}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto flex justify-center sm:inline-block mb-10"
@@ -122,7 +123,7 @@ const Zagar = () => {
                   Свяжитесь в Telegram — отвечу быстро и согласую удобное время.
                 </p>
                 <a
-                  href={TELEGRAM_URL}
+                  href={TELEGRAM_URL} onClick={trackTelegramClick}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -237,7 +238,7 @@ const Zagar = () => {
               <AccordionContent className="text-zinc-800 leading-relaxed">
                 Напишите в Telegram{' '}
                 <a
-                  href={TELEGRAM_URL}
+                  href={TELEGRAM_URL} onClick={trackTelegramClick}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gold underline font-semibold"
@@ -262,7 +263,7 @@ const Zagar = () => {
           </p>
           <p className="text-white/60 text-sm mb-4">Хотите подготовиться к отпуску или событию — запишитесь заранее.</p>
           <a
-            href={TELEGRAM_URL}
+            href={TELEGRAM_URL} onClick={trackTelegramClick}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto flex justify-center sm:inline-block mb-6"

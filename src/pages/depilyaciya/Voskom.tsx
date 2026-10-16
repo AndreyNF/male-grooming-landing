@@ -3,8 +3,9 @@ import PageLayout from '@/components/layout/PageLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { telegramUrl, trackTelegramClick } from '@/lib/telegram';
 
-const TELEGRAM_URL = 'https://t.me/sugar_TS';
+const TELEGRAM_URL = telegramUrl('depilyaciya_voskom');
 
 const PRICE_ROWS = [
   { label: 'Окантовка бороды', price: '1 000 ₽' },
@@ -39,7 +40,7 @@ const Voskom = () => {
           <p className="text-white/60 text-sm sm:text-base mb-8 tracking-wide">
             Почему профессиональный воск — лучший выбор для мужчин. Без компромиссов.
           </p>
-          <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
+          <a href={TELEGRAM_URL} onClick={trackTelegramClick} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="bg-gold text-black hover:bg-gold/85 font-semibold px-8 py-3 text-lg"
@@ -110,7 +111,7 @@ const Voskom = () => {
             Натали, ул. Культуры 2, каб. 115.3. Ежедневно 10:00–20:00.
           </p>
           <a
-            href={TELEGRAM_URL}
+            href={TELEGRAM_URL} onClick={trackTelegramClick}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mb-6"

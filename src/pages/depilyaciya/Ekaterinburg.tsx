@@ -3,8 +3,9 @@ import PageLayout from '@/components/layout/PageLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { telegramUrl, trackTelegramClick } from '@/lib/telegram';
 
-const TELEGRAM_URL = 'https://t.me/sugar_TS';
+const TELEGRAM_URL = telegramUrl('depilyaciya_ekaterinburg');
 
 const Ekaterinburg = () => {
   return (
@@ -23,7 +24,7 @@ const Ekaterinburg = () => {
             Личный кабинет мастера — не салон, не очередь. Работаю только с мужчинами. Запись через Telegram.
           </p>
           <a
-            href={TELEGRAM_URL}
+            href={TELEGRAM_URL} onClick={trackTelegramClick}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-block"
@@ -141,7 +142,7 @@ const Ekaterinburg = () => {
             Натали, ул. Культуры 2, каб. 115.3. Ежедневно 10:00–20:00.
           </p>
           <a
-            href={TELEGRAM_URL}
+            href={TELEGRAM_URL} onClick={trackTelegramClick}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-block mb-6"

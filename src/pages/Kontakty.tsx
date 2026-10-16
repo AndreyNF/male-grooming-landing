@@ -4,8 +4,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import PhoneButton from '@/components/PhoneButton';
 import { Link } from 'react-router-dom';
+import { telegramUrl, trackTelegramClick } from '@/lib/telegram';
 
-const TELEGRAM_URL = 'https://t.me/sugar_TS';
+const TELEGRAM_URL = telegramUrl('kontakty');
 
 const Kontakty = () => {
   return (
@@ -81,7 +82,7 @@ const Kontakty = () => {
                   <div>
                     <p className="font-heading font-semibold text-white mb-1">Запись</p>
                     <a
-                      href={TELEGRAM_URL}
+                      href={TELEGRAM_URL} onClick={trackTelegramClick}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gold font-semibold text-sm hover:opacity-80 transition-opacity"
@@ -123,7 +124,7 @@ const Kontakty = () => {
           <p className="text-white/60 text-sm mb-6">
             Напишите в Telegram — уточним зону, время и стоимость.
           </p>
-          <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" className="block sm:inline-block">
+          <a href={TELEGRAM_URL} onClick={trackTelegramClick} target="_blank" rel="noopener noreferrer" className="block sm:inline-block">
             <Button size="lg" className="w-full sm:w-auto bg-gold text-black hover:bg-gold/85 font-semibold px-8">
               <Icon name="Send" className="w-4 h-4 mr-2" />
               Написать @sugar_TS

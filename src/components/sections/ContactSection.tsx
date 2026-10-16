@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { telegramUrl, trackTelegramClick } from '@/lib/telegram';
 import PhoneButton from '@/components/PhoneButton';
 import Icon from '@/components/ui/icon';
 
@@ -183,7 +184,7 @@ const ContactSection = () => {
             <p className="text-gray-300 mb-6">
               Проще спросить напрямую — отвечаю честно и без лишних слов.
             </p>
-            <a href="https://t.me/sugar_TS" target="_blank" rel="noopener noreferrer">
+            <a href={telegramUrl('faq')} onClick={trackTelegramClick} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-gold text-black hover:bg-gold/90 font-semibold px-8 py-3 text-lg animate-scale-in shadow-lg">Написать в Telegram @sugar_TS</Button>
             </a>
           </div>

@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import { telegramUrl, trackTelegramClick } from '@/lib/telegram';
 import PhoneButton from '@/components/PhoneButton';
 
 const SIZES = '(min-width: 1024px) 512px, (min-width: 416px) 384px, calc(100vw - 32px)';
@@ -44,7 +45,7 @@ const HeroSection = () => {
             </p>
             <p className="text-sm text-foreground/50"><Icon name="MapPin" size={14} className="inline mr-1" />ул. Культуры, 2, каб. 115.3 · Ежедневно 10:00–20:00</p>
             <div className="flex flex-wrap gap-4">
-              <a id="hero-cta-desktop" href="https://t.me/sugar_TS" target="_blank" rel="noopener noreferrer">
+              <a id="hero-cta-desktop" href={telegramUrl('home_hero')} onClick={trackTelegramClick} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-gold text-black hover:bg-gold/85 font-bold px-6 py-[14px] h-auto rounded-lg text-lg animate-scale-in shadow-lg">Записаться в Telegram</Button>
               </a>
               <PhoneButton place="hero" />
@@ -102,7 +103,7 @@ const HeroSection = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4 items-center">
-              <a id="hero-cta" href="https://t.me/sugar_TS" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
+              <a id="hero-cta" href={telegramUrl('home_hero_mobile')} onClick={trackTelegramClick} target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
                 <Button size="lg" className="w-full bg-gold text-black hover:bg-gold/85 font-bold px-6 py-[14px] h-auto rounded-lg text-lg animate-scale-in shadow-lg">Записаться в Telegram</Button>
               </a>
               <PhoneButton place="hero" />
