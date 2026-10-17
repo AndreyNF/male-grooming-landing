@@ -13,6 +13,7 @@ interface PageLayoutProps {
 }
 
 const TELEGRAM_URL = telegramUrl('header_footer');
+const OG_IMAGE = "https://cdn.poehali.dev/projects/f9471a49-697e-4896-8b0f-bb9d1e5e5bef/bucket/936fa0d9-c47f-4895-8f87-963ab8637004.jpg";
 const TELEGRAM_HANDLE = "@sugar_TS";
 
 const NAV_LINKS = [
@@ -81,7 +82,12 @@ const PageLayout: React.FC<PageLayoutProps> = ({
     setMeta('meta[name="twitter:url"]', 'content', canonical);
     setMeta('meta[name="twitter:title"]', 'content', title);
     setMeta('meta[name="twitter:description"]', 'content', description);
-  }, [title, description, canonical]);
+    setMeta('meta[property="og:type"]', 'content', pathname.startsWith('/blog/') ? 'article' : 'website');
+    setMeta('meta[property="og:image"]', 'content', OG_IMAGE);
+    setMeta('meta[name="twitter:image"]', 'content', OG_IMAGE);
+    setMeta('meta[property="og:image:width"]', 'content', '1200');
+    setMeta('meta[property="og:image:height"]', 'content', '630');
+  }, [title, description, canonical, pathname]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">

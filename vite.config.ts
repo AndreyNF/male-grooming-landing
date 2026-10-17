@@ -1,6 +1,7 @@
 import {defineConfig} from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import fs from "fs";
 import {componentTagger} from "pp-tagger";
 
 // https://vitejs.dev/config/
@@ -101,9 +102,74 @@ const hmrKeepalive = {
     transformIndexHtml: () => [{tag: 'script', children: hmrClient, injectTo: 'head-prepend' as const}],
 };
 
+const OG_PAGES: Record<string, string> = {
+    '/': 'src/pages/Index.tsx',
+    '/zagar/': 'src/pages/Zagar.tsx',
+    '/kontakty/': 'src/pages/Kontakty.tsx',
+    '/depilyaciya/': 'src/pages/depilyaciya/Index.tsx',
+    '/depilyaciya/ekaterinburg/': 'src/pages/depilyaciya/Ekaterinburg.tsx',
+    '/depilyaciya/voskom/': 'src/pages/depilyaciya/Voskom.tsx',
+    '/depilyaciya/bikini/': 'src/pages/depilyaciya/Bikini.tsx',
+    '/depilyaciya/boroda/': 'src/pages/depilyaciya/Boroda.tsx',
+    '/depilyaciya/nogi-ruki/': 'src/pages/depilyaciya/NogiRuki.tsx',
+    '/blog/shugaring-vs-vosk/': 'src/pages/blog/ShugaringVsVosk.tsx',
+};
+
+const escAttr = (v: string) => v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+const escText = (v: string) => v.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+
+const setMetaTag = (html: string, attr: 'property' | 'name', key: string, value: string) => {
+    const re = new RegExp(`(<meta\\s+${attr}="${key}"\\s+content=")[^"]*(")`);
+    return re.test(html) ? html.replace(re, (_m, a, b) => a + escAttr(value) + b) : html;
+};
+
+let ogOutDir = '';
+
+const ogPerPage = {
+    name: 'og-per-page-html',
+    apply: 'build' as const,
+    configResolved(config: any) {
+        ogOutDir = path.resolve(config.root, config.build.outDir);
+    },
+    closeBundle() {
+        const dist = ogOutDir || path.resolve(__dirname, 'dist');
+        const basePath = path.join(dist, 'index.html');
+        if (!fs.existsSync(basePath)) return;
+        const base = fs.readFileSync(basePath, 'utf-8');
+        for (const [route, file] of Object.entries(OG_PAGES)) {
+            const src = fs.readFileSync(path.resolve(__dirname, file), 'utf-8');
+            const pick = (name: string) => src.match(new RegExp(`${name}="([^"]*)"`))?.[1];
+            const title = pick('title');
+            const description = pick('description');
+            const canonical = pick('canonical');
+            if (!title || !description || !canonical) continue;
+            let html = base;
+            html = html.replace(/<title>[^<]*<\/title>/, `<title>${escText(title)}</title>`);
+            html = setMetaTag(html, 'name', 'description', description);
+            html = html.replace(/(<link rel="canonical" href=")[^"]*(")/, (_m, a, b) => a + escAttr(canonical) + b);
+            const type = route.startsWith('/blog/') ? 'article' : 'website';
+            html = setMetaTag(html, 'property', 'og:type', type);
+            html = setMetaTag(html, 'property', 'og:url', canonical);
+            html = setMetaTag(html, 'property', 'og:title', title);
+            html = setMetaTag(html, 'property', 'og:description', description);
+            html = setMetaTag(html, 'name', 'twitter:url', canonical);
+            html = setMetaTag(html, 'name', 'twitter:title', title);
+            html = setMetaTag(html, 'name', 'twitter:description', description);
+            if (route === '/') {
+                fs.writeFileSync(basePath, html);
+                continue;
+            }
+            const dir = path.join(dist, route);
+            fs.mkdirSync(dir, {recursive: true});
+            fs.writeFileSync(path.join(dir, 'index.html'), html);
+        }
+    },
+};
+
 export default defineConfig(({mode}) => ({
     plugins: [
         hmrKeepalive,
+        ogPerPage,
         react(),
         mode === 'development' &&
         componentTagger(),
